@@ -10,6 +10,10 @@ class SessionsController < ApplicationController
     end
   end
 
+  def edit
+    
+  end
+
   def destroy
     session.clear
     redirect_to "/"
