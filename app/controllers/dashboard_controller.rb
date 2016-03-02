@@ -2,7 +2,6 @@ class DashboardController < ApplicationController
 
   def index
     @user_info = current_user
-    @stuff     = trailapi_service.some_info
   end
 
   private
@@ -12,3 +11,4 @@ class DashboardController < ApplicationController
   end
 
 end
+ 

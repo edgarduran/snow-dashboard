@@ -9,5 +9,6 @@ Rails.application.routes.draw do
 
   resources :dashboard, only: [:index]
   resources :resorts,   only: [:index, :create]
+  resources :sessions,  only: [:edit, :update]
 
 end
