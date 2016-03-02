@@ -11,7 +11,14 @@ class SessionsController < ApplicationController
   end
 
   def edit
-    
+    user = User.find(params[:id])
+    if user.update_attributes(phone_number: "#{params[:phone_number]}")
+      redirect_to dashboard_index_path
+      flash[:success] = "You have successfully added a number to your account."
+    else
+      redirect_to dashboard_index_path
+      flash[:error] = "You must enter a valid phone #."
+    end
   end
 
   def destroy

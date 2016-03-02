@@ -19,7 +19,7 @@ class ResortsController < ApplicationController
       flash[:success] = "#{@resort.official_name} has been addes to your dashboard."
     else
       redirect_to '/'
-      flash[:erro] = "Uh-oh, something went wrong."
+      flash[:error] = "Uh-oh, something went wrong."
     end
   end
 
