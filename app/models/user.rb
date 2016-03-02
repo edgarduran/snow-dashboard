@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_many :resorts
 
   def self.find_or_create_from_oauth(oauth)
     user = User.find_or_create_by(provider: oauth.provider, uid: oauth.uid)

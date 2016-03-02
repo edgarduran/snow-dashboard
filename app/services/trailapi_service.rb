@@ -16,7 +16,7 @@ class TrailapiService
   end
 
   def search_results(params)
-    results = parse_json(connection.get("?limit=25&q[activities_activity_name_cont]=#{params[:resort_name]}&q[activities_activity_type_name_eq]=snow+sports&q[state_cont]=Colorado"))
+    results = parse_json(connection.get("?limit=50&q[activities_activity_name_cont]=#{params[:resort_name]}&q[activities_activity_type_name_eq]=snow+sports&q[state_cont]=Colorado"))
     clean_up_search(results, params)
   end
 
@@ -30,7 +30,7 @@ class TrailapiService
         latitude:      data[:lat],
         longitude:     data[:lon],
         description:   data[:activities].first[:description],
-        type:          data[:activities].first[:attribs][:type]
+        type:          data[:activities].first[:attribs]
       }
     end
     new_hash.delete_if { |result| !result[:name].downcase.include?(params[:resort_name].downcase)}
