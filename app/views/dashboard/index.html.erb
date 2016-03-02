@@ -1,1 +1,29 @@
 <h1><%= current_user.name %>'s Dashboard</h1>
+<h3>Your dashboard is empty add your favorite resorts to begin playing</h3>
+
+
+<h3>Search</h3>
+<h4>Fields</h4>
+<ul>
+  <li>State ##dropdown</li>
+  <li>City ##search field</li>
+  <h4>Or</h4>
+  <li>Search by name ##text field, look into autocomplete</li>
+  <div class="search">
+    <%= render partial: 'partials/resort_search' %>
+  </div>
+</ul><br><br>
+
+<div class="search">
+  <%= render partial: 'partials/search_results' %>
+</div><br><br><br><br>
+
+
+<div class="center-align">
+
+<% @stuff[:places].each do |name| %>
+  <ul>
+    <li><%= name[:name] %></li>
+  </ul>
+<% end %>
+</div>

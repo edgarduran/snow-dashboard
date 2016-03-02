@@ -81,5 +81,3 @@ test:
 production:
   <<: *default
   database: snow-dashboard_production
-  username: snow-dashboard
-  password: <%= ENV['SNOW-DASHBOARD_DATABASE_PASSWORD'] %>

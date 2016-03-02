@@ -1,0 +1,10 @@
+<h2>Display results here</h2>
+
+<% @results.each do |result| %>
+  <ul>
+    <li><%= result[:name] %></li>
+    <li><%= result[:official_name] %></li>
+    <li><%= result[:state] %></li>
+    <%= link_to "Add to Dashboard" %>
+  </ul>
+<% end %>
