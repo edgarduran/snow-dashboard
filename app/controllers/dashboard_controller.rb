@@ -10,8 +10,5 @@ class DashboardController < ApplicationController
     TrailapiService.new
   end
 
-  def twilio_service
-    TwilioService.new
-  end
-
 end
+ 
