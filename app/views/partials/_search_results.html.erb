@@ -1,0 +1,21 @@
+<h2>Display results here</h2>
+
+<% @results.each do |result| %>
+  <ul>
+    <li><%= result[:name] %></li>
+    <li><%= result[:official_name] %></li>
+    <li><%= result[:state] %></li>
+    <li><%= result[:description] %></li>
+    <%= form_tag resorts_path, method: :post do %>
+      <%= hidden_field_tag(:name, result[:name]) %>
+      <%= hidden_field_tag(:official_name, result[:official_name]) %>
+      <%= hidden_field_tag(:state, result[:state]) %>
+      <%= hidden_field_tag(:description, result[:description]) %>
+      <%= hidden_field_tag(:latitude, result[:latitude]) %>
+      <%= hidden_field_tag(:longitude, result[:longitude]) %>
+      <%= hidden_field_tag(:type, result[:type]) %>
+      <%= hidden_field_tag(:user_id, current_user.id) %>
+      <%= submit_tag "Add to Dashboard", method: :post %>
+    <% end %>
+  </ul>
+<% end %>

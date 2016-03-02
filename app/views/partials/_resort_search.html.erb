@@ -1,0 +1,5 @@
+<%= form_tag resorts_path, method: :get do %>
+  <%= label_tag :resort_name %>
+  <%= text_field_tag :resort_name %>
+  <%= submit_tag "Search", class:"btn btn-success" %>
+<% end %>
