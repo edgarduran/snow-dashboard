@@ -9,18 +9,9 @@
   </ul><br>
 <% end %>
 
-
-<h3>Search</h3>
-<h4>Fields</h4>
-<ul>
-  <li>State ##dropdown</li>
-  <li>City ##search field</li>
-  <h4>Or</h4>
-  <li>Search by name ##text field, look into autocomplete</li>
-  <div class="search">
-    <%= render partial: 'partials/resort_search' %>
-  </div>
-</ul><br><br>
+<div class="search">
+  <%= render partial: 'partials/resort_search' %>
+</div>
 
 <% unless current_user.phone_number %>
   <div class="phone">
