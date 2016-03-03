@@ -14,6 +14,7 @@ gem 'rails_12factor'
 gem 'pry-rails'
 gem 'faraday'
 gem 'twilio-ruby', '~> 4.11.1'
+gem 'forecast_io'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
