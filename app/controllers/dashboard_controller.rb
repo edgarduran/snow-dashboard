@@ -4,12 +4,13 @@ class DashboardController < ApplicationController
     @user_info = current_user
     @resorts   = current_user.resorts
     @states    = state_list
+    @forecast  = forecast_service.weather
   end
 
   private
 
-  def trailapi_service
-    TrailapiService.new
+  def forecast_service
+    ForecastService.new
   end
 
   def state_list
