@@ -1,5 +1,4 @@
 require 'twilio-ruby'
-
 class TwilioService
 
   attr_reader :client
