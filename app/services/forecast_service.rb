@@ -11,10 +11,32 @@ class ForecastService
   end
 
   def weather
-    binding.pry
-    parse_json(connection.get("39.7392,-104.9903"))
+    parse_json(connection.get("39.7392,-104.9903?exclude=[minutely,flags,hourly]"))
   end
 
+  def three_day_forecast
+    full_forecast = parse_json(connection.get("39.7392,-104.9903?exclude=[minutely,flags,hourly]"))
+    limit_days(full_forecast, 2)
+  end
+
+  def five_day_forecast
+    full_forecast = parse_json(connection.get("39.7392,-104.9903?exclude=[minutely,flags,hourly]"))
+    limit_days(full_forecast, 4)
+  end
+
+  def limit_days(data, days)
+    days = data[:daily][:data][0..days]
+    days.map do |day|
+      {
+        summary:     day[:summary],
+        icon:        day[:icon],
+        precip_prob: day[:precipProbability],
+        min_temp:    day[:temperatureMin],
+        max_temp:    day[:temperatureMax],
+        humidity:    day[:humidity]
+      }
+    end
+  end
 
   private
 

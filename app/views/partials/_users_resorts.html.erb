@@ -10,6 +10,13 @@
           <li>Description: <%= resort.description %></li>
           <li>Type: <%= resort.type %></li>
         </ul>
+        <h4>Weather</h4>
+        <h5>Today</h5>
+        <%= @forecast.first %>
+        <h5>Tomorrow</h5>
+        <%= @forecast[1] %>
+        <h5>Third day</h5>
+        <%= @forecast.last %>
       </div>
     <% end %>
   </div>
