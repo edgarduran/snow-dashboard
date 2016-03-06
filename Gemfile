@@ -20,6 +20,12 @@ gem 'forecast_io'
 
 group :test do
   gem 'byebug'
+  gem 'capybara'
+  gem 'mocha'
+  gem 'launchy'  
+  gem 'simplecov'
+  gem 'webmock'
+  gem 'vcr'
 end
 
 group :development do
