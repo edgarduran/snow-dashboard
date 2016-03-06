@@ -4,7 +4,7 @@ class DashboardController < ApplicationController
     @user_info = current_user
     @resorts   = current_user.resorts
     @states    = state_list
-    @forecast  = forecast_service.three_day_forecast
+    @forecast  = forecast_service.three_day_forecast(@resorts)
   end
 
   private

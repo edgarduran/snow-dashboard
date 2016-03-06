@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160302192045) do
+ActiveRecord::Schema.define(version: 20160306192132) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,12 +21,12 @@ ActiveRecord::Schema.define(version: 20160302192045) do
     t.string   "official_name"
     t.string   "state"
     t.text     "description"
-    t.integer  "latitude"
-    t.integer  "longitude"
+    t.decimal  "latitude",      precision: 9, scale: 6
+    t.decimal  "longitude",     precision: 9, scale: 6
     t.string   "type"
     t.integer  "user_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
   end
 
   add_index "resorts", ["user_id"], name: "index_resorts_on_user_id", using: :btree

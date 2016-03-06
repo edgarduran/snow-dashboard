@@ -14,9 +14,11 @@ class ForecastService
     parse_json(connection.get("39.7392,-104.9903?exclude=[minutely,flags,hourly]"))
   end
 
-  def three_day_forecast
-    full_forecast = parse_json(connection.get("39.7392,-104.9903?exclude=[minutely,flags,hourly]"))
-    limit_days(full_forecast, 2)
+  def three_day_forecast(user_resorts)
+    user_resorts.map do |resort|
+      full_forecast = parse_json(connection.get("#{resort[:latitude].to_f},#{resort[:longitude].to_f}?exclude=[minutely,flags,hourly]"))
+      limit_days(full_forecast, 2)
+    end
   end
 
   def five_day_forecast

@@ -2,7 +2,7 @@
 
   <h2 class="center" >Favorite Resorts</h2>
   <div class="row">
-    <% @resorts.each do |resort| %>
+    <% @resorts.each_with_index do |resort, index| %>
       <div class="col-sm-6 col-md-4">
         <ul>
           <li><h3>Name: <%= resort.official_name %></h3></li>
@@ -12,12 +12,13 @@
         </ul>
         <h4>Weather</h4>
         <h5>Today</h5>
-        <%= @forecast.first %>
-        <h5>Tomorrow</h5>
-        <%= @forecast[1] %>
-        <h5>Third day</h5>
-        <%= @forecast.last %>
+        <%= @forecast[index].first %>
+        <h5><%= DateTime.tomorrow.strftime("%A") %></h5>
+        <%= @forecast[index][1] %>
+        <h5><%= (DateTime.tomorrow + 1).strftime("%A") %></h5>
+        <%= @forecast[index].last %>
       </div>
+      <% index + 1 %>
     <% end %>
   </div>
 
