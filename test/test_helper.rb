@@ -9,7 +9,6 @@ require 'simplecov'
 SimpleCov.start 'rails'
 
 class ActiveSupport::TestCase
-  # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   fixtures :all
 
   VCR.configure do |config|
@@ -24,6 +23,7 @@ class ActionDispatch::IntegrationTest
   include Capybara::DSL
 
   def setup
+    Capybara.app = SnowDashboard::Application
     stub_omniauth
   end
 
@@ -34,12 +34,30 @@ class ActionDispatch::IntegrationTest
   def stub_omniauth
     OmniAuth.config.test_mode = true
 
-    OmniAuth.config.mock_auth[:google] = OmniAuth::AuthHash.new(
-      {"provider"=>"spotify",
-        "uid"=>nil,
-        "info"=> "stuff"}
-        )
+    OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new(
+      {"provider"=>"google",
+       "uid"=>"104436580263943299126",
+       "info"=>
+          {"name"=>"Edgar Duran",
+           "email"=>"edgar.eduran@gmail.com",
+           "first_name"=>"Edgar",
+           "last_name"=>"Duran",
+           "image"=>"https://lh3.googleusercontent.com/-BdFiwpam_1k/AAAAAAAAAAI/AAAAAAAAEUo/fPFVSiHSZ_4/photo.jpg",
+           "urls"=>{"Google"=>"https://plus.google.com/104436580263943299126"}},
+       "credentials"=>{"token"=>"ya29.nQK7UbxFTpMRCHxBNUwFaBFOWvZYf9o9cDKIkENqJBa9zRumJe4wEnZ-zATI95J-tJg", "expires_at"=>1457304606, "expires"=>true},
+       })
     end
 
+  def login_user
+    visit "/"
+
+    assert_equal 200, page.status_code
+
+    click_link "Login with Google"
+
+    assert_equal dashboard_index_path, current_path
+    assert page.has_content?("Edgar Duran's Dashboard")
+    assert page.has_link?("Logout")
+  end
 
 end
