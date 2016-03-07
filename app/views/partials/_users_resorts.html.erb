@@ -1,24 +1,49 @@
-<div class="container">
-
-  <h2 class="center" >Favorite Resorts</h2>
-  <div class="row">
-    <% @resorts.each_with_index do |resort, index| %>
-      <div class="col-sm-6 col-md-4">
-        <ul>
-          <li><h3>Name: <%= resort.official_name %></h3></li>
-          <li>State: <%= resort.state %></li>
-          <li>Description: <%= resort.description %></li>
-          <li>Type: <%= resort.type %></li>
-        </ul>
-        <h4>Weather</h4>
-        <h5>Today</h5>
-        <%= @forecast[index].first %>
-        <h5><%= DateTime.tomorrow.strftime("%A") %></h5>
-        <%= @forecast[index][1] %>
-        <h5><%= (DateTime.tomorrow + 1).strftime("%A") %></h5>
-        <%= @forecast[index].last %>
-      </div>
-    <% end %>
-  </div>
-
+<div class="row">
+  <% @resorts.each_with_index do |resort, index| %>
+    <div class="col-md-4 col-sm-6">
+        <h3 class="text-center"><%= resort.official_name %></h3>
+        <div class="resort-title">
+            <div class="col-md-4 col-sm-4">
+              <div class="thumbnail">
+                  <%= image_tag "#{@forecast[index][0][:icon]}.png", class: "thumbnail"%>
+                  <p class="text-center"><%= @forecast[index][0][:summary] %></p>
+              </div>
+              <h5>Today</h5>
+                <ul class="list-unstyled">
+                    <li>Max: <%= @forecast[index][0][:max_temp] %> </li>
+                    <li>Min: <%= @forecast[index][0][:min_temp] %></li>
+                    <li>Prob: <%= @forecast[index][0][:precip_prob] %> </li>
+                    <li>Hum: <%= @forecast[index][0][:humidity] %> </li>
+                </ul>
+            </div>
+            <div class="col-md-4 col-sm-4">
+              <div class="thumbnail">
+                  <%= image_tag "#{@forecast[index][1][:icon]}.png", class: "thumbnail"%>
+                  <p class="text-center"><%= @forecast[index][1][:summary] %></p>
+              </div>
+              <h5><%= DateTime.tomorrow.strftime("%A") %></h5>
+                <ul class="list-unstyled">
+                    <li>Max: <%= @forecast[index][1][:max_temp] %> </li>
+                    <li>Min: <%= @forecast[index][1][:min_temp] %></li>
+                    <li>Prob: <%= @forecast[index][1][:precip_prob] %> </li>
+                    <li>Hum: <%= @forecast[index][1][:humidity] %> </li>
+                </ul>
+            </div>
+            <div class="col-md-4 col-sm-4">
+                <div class="thumbnail">
+                    <%= image_tag "#{@forecast[index][2][:icon]}.png", class: "thumbnail"%>
+                    <p class="text-center"><%= @forecast[index][2][:summary] %></p>
+                </div>
+                <h5><%= (DateTime.tomorrow + 1).strftime("%A") %></h5>
+                <ul class="list-unstyled">
+                    <li>Max: <%= @forecast[index][2][:max_temp] %> </li>
+                    <li>Min: <%= @forecast[index][2][:min_temp] %></li>
+                    <li>Prob: <%= @forecast[index][2][:precip_prob] %> </li>
+                    <li>Hum: <%= @forecast[index][2][:humidity] %> </li>
+                </ul><br>
+            </div>
+            <p class"text-center">This paragraph is the mountan description. It should go at the bottom of the 3 columns and stay here. Remember to limit the character count and to try tio clean up the text.</p>
+        </div>
+    </div>
+  <% end %>
 </div>

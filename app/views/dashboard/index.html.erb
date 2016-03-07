@@ -1,12 +1,13 @@
-<h1><%= current_user.name %>'s Dashboard</h1>
-
+<div>
+  <input type="search" placeholder="Search Bar">
+</div>
+<h1 class="text-center"><%= current_user.name %>'s Dashboard</h1>
 <% if current_user.resorts == [] %>
   <h3>Your dashboard is empty add your favorite resorts to begin playing</h3>
 <% else %>
   <div class="resorts">
     <%= render partial: 'partials/users_resorts' %>
   </div>
-  </ul><br>
 <% end %>
 
 <div class="search">

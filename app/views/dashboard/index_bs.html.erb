@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <div>
+        <input type="search" placeholder="Search Bar">
+    </div>
+    <h1 class="text-center"><%= current_user.name %>'s Dashboard</h1>
+    <% if current_user.resorts == [] %>
+      <h3>Your dashboard is empty add your favorite resorts to begin playing</h3>
+    <% else %>
+      <div class="resorts">
+        <%= render partial: 'partials/users_resorts' %>
+      </div>
+      </ul><br>
+    <% end %>
+    
+    <div class="row">
+        <div class="col-md-4 col-sm-6">
+            <h3 class="text-center">Copper Mountain</h3>
+            <div class="resort-title">
+                <div class="col-md-4 col-sm-4">
+                    <div class="thumbnail"><img src="assets/img/clear-day.png">
+                        <p class="text-center">Sunny as Shit</p>
+                    </div>
+                    <ul class="list-unstyled">
+                        <li>Max </li>
+                        <li>Min </li>
+                        <li>Prob </li>
+                        <li>Humidity </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <div class="thumbnail"><img src="assets/img/clear-day.png">
+                        <p class="text-center">Sunny as Shit</p>
+                    </div>
+                    <ul class="list-unstyled">
+                        <li>Max </li>
+                        <li>Min </li>
+                        <li>Prob </li>
+                        <li>Humidity </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <div class="thumbnail"><img src="assets/img/clear-day.png">
+                        <p class="text-center">Sunny as Shit</p>
+                    </div>
+                    <ul class="list-unstyled">
+                        <li>Max </li>
+                        <li>Min </li>
+                        <li>Prob </li>
+                        <li>Humidity </li>
+                    </ul>
+                </div>
+            </div>
+            <p>This paragraph is the mountan description. It should go at the bottom of the 3 columns and stay here. Remember to limit the character count and to try tio clean up the text.</p>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
