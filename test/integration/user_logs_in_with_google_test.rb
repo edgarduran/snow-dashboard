@@ -33,13 +33,8 @@ class UserLogsInWithGoogleTest < ActionDispatch::IntegrationTest
       login_user
 
       assert page.has_content?("Edgar Duran's Dashboard")
-      assert page.has_content?("Favorite Resorts")
+      assert page.has_content?("Your dashboard is empty add your favorite resorts to begin playing")
       assert page.has_link?("Logout")
-      assert page.has_content?("Edgar Duran")
-      assert page.has_content?("eduran1")
-      assert page.has_content?("edgarduran86@gmail.com")
-      assert page.has_link?("Add Resorts to Dashboard")
-      assert page.has_link?("Enter your phone number to receive snow text alerts")
     end
   end
 end

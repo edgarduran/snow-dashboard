@@ -44,7 +44,7 @@ class ActionDispatch::IntegrationTest
            "last_name"=>"Duran",
            "image"=>"https://lh3.googleusercontent.com/-BdFiwpam_1k/AAAAAAAAAAI/AAAAAAAAEUo/fPFVSiHSZ_4/photo.jpg",
            "urls"=>{"Google"=>"https://plus.google.com/104436580263943299126"}},
-       "credentials"=>{"token"=>"ya29.nQK7UbxFTpMRCHxBNUwFaBFOWvZYf9o9cDKIkENqJBa9zRumJe4wEnZ-zATI95J-tJg", "expires_at"=>1457304606, "expires"=>true},
+       "credentials"=>{"token"=>"ya29.nQKQ-QADn-EfMZCxoLrPukQoiwjHJgwA6zrr0gur2WXo_w-chFeCSAq_oOjs2kNt2-k", "expires_at"=>1457314594, "expires"=>true},
        })
     end
 

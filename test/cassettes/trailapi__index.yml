@@ -1,0 +1,268 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://trailapi-trailapi.p.mashape.com/?limit=20&q%5Bactivities_activity_type_name_eq%5D=snow%20sports&q%5Bstate_cont%5D=Colorado
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Mashape-Key:
+      - O08i6kp55lmsh5eIf5vs5kxXOVXRp1rwwswjsnOwrws1QwF4nb
+      Accept:
+      - text/plain
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 07 Mar 2016 01:08:38 GMT
+      Etag:
+      - '"7342639b3ab7a662f4153f0c8d2c13be"'
+      Server:
+      - Mashape/5.0.6
+      Via:
+      - 1.1 vegur
+      X-Rack-Cache:
+      - miss
+      X-Request-Id:
+      - 245966f7-f494-474a-b543-7fa38da301f7
+      X-Runtime:
+      - '0.394551'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"places":[{"city":"Snowmass Village","state":"Colorado","country":"United
+        States","name":"Garrett Gulch","parent_id":null,"unique_id":18503,"directions":null,"lat":0.0,"lon":0.0,"description":null,"date_created":null,"children":[],"activities":[{"name":"Garrett
+        Gulch","unique_id":"6-1375","place_id":18503,"activity_type_id":9,"activity_type_name":"snow
+        sports","url":"http://www.snowtoit.com/trail.php?c=73&i=1375","attribs":{"\"type\"":"\"Lift-serviced
+        \\/ Resort\""},"description":"Advanced run similar to a natural half-pipe.  Accessed
+        via the Sheer Bliss or Big Burn lifts.","length":0.0,"activity_type":{"created_at":"2012-08-15T17:33:19Z","id":9,"name":"snow
+        sports","updated_at":"2012-08-15T17:33:19Z"},"thumbnail":null,"rank":null,"rating":4.0}]},{"city":"Durango","state":"Colorado","country":"United
+        States","name":"Durango Mountain Resort","parent_id":null,"unique_id":14017,"directions":null,"lat":37.630968,"lon":-107.814054,"description":null,"date_created":null,"children":[],"activities":[{"name":"Durango
+        Mountain Resort","unique_id":"6-693","place_id":14017,"activity_type_id":9,"activity_type_name":"snow
+        sports","url":"http://www.snowtoit.com/trail.php?c=73&i=693","attribs":{"\"type\"":"\"Lift-serviced
+        \\/ Resort\""},"description":"Durango Mountain Resort (formerly known as Purgatory)
+        features 1,360 skiable acres, 250 of which is covered with snow making equipment.
+        The highest point on the mountain is 10,882 feet, giving the resort a 2,029
+        foot vertical drop.<br /><br />Durango Mountain Resort offers 10 lifts and
+        the slope ratings are roughly split: 20% beginner, 45% intermediate, and 35%
+        advanced. Max uphill capacity is 15,050 skiers and snowboarders per hour.
+        Average annual snowfall is 230 inches and there are 88 runs.","length":0.0,"activity_type":{"created_at":"2012-08-15T17:33:19Z","id":9,"name":"snow
+        sports","updated_at":"2012-08-15T17:33:19Z"},"thumbnail":"http://images.snowtoit.com/2011/04/durango_mountain5-0.jpg","rank":null,"rating":4.0}]},{"city":"Boulder","state":"Colorado","country":"United
+        States","name":"Mud Lake","parent_id":null,"unique_id":14124,"directions":null,"lat":39.978884,"lon":-105.507774,"description":null,"date_created":null,"children":[],"activities":[{"name":"Mud
+        Lake","unique_id":"6-1084","place_id":14124,"activity_type_id":9,"activity_type_name":"snow
+        sports","url":"http://www.snowtoit.com/trail.php?c=73&i=1084","attribs":{"\"type\"":"\"Backcountry
+        \\/ Primative\""},"description":"Mud Lake offers 2.6 miles of trails for cross
+        country skiing. Conditions are usually ideal within 24 hours after a local
+        snowfall.","length":0.0,"activity_type":{"created_at":"2012-08-15T17:33:19Z","id":9,"name":"snow
+        sports","updated_at":"2012-08-15T17:33:19Z"},"thumbnail":null,"rank":null,"rating":0.0}]},{"city":"Glenwood
+        Springs","state":"Colorado","country":"United States","name":"Red Mountain
+        Trail","parent_id":null,"unique_id":707,"directions":"exit Glenwood Springs
+        and come in to town.Turn right on 8th street ,come to the next stop and turn
+        right.Come to the next stop and turn left.Go about .25 of a mile and turn
+        right.This is where the road tee''s.Go about 100YRDS. and then you need to
+        take a left.The road will curve to the left,so take the road another 100YRDDS
+        and your there. parking is to the left.","lat":39.54513,"lon":-107.33447,"description":null,"date_created":null,"children":[],"activities":[{"name":"Red
+        Mountain Trail","unique_id":"6-218","place_id":707,"activity_type_id":9,"activity_type_name":"snow
+        sports","url":"http://www.snowtoit.com/trail.php?c=73&i=218","attribs":{"\"type\"":"\"Backcountry
+        \\/ Primative\""},"description":"This is a 4 mile singletrack trail that drops
+        down from the road. Either snow shoe it as an out-and-back, or hike it as
+        a loop with the road.","length":0.0,"activity_type":{"created_at":"2012-08-15T17:33:19Z","id":9,"name":"snow
+        sports","updated_at":"2012-08-15T17:33:19Z"},"thumbnail":null,"rank":null,"rating":0.0}]},{"city":"Boulder","state":"Colorado","country":"United
+        States","name":"Betasso Preserve","parent_id":null,"unique_id":771,"directions":"From
+        US36 in Boulder, go west on Canyon Rd approx 4 miles. Past the tunnel, turn
+        right on Sugarloaf Rd. Go about a mile and turn right on Betasso Rd. The trailhead
+        is about 1/2 mile or so on the left.","lat":40.01575,"lon":-105.34418,"description":null,"date_created":null,"children":[],"activities":[{"name":"Betasso
+        Preserve","unique_id":"6-289","place_id":771,"activity_type_id":9,"activity_type_name":"snow
+        sports","url":"http://www.snowtoit.com/trail.php?c=73&i=289","attribs":{"\"type\"":"\"Backcountry
+        \\/ Primative\""},"description":"Betasso Preserve has 8.9 miles of singletrack
+        trails that are open to cross country skis and snow shoes when there is enough
+        snow. Conditions are usually best within 24 hours of a local snowfall. Snow
+        shoers, please don''t walk on the ski track and please yield to all skiers.","length":0.0,"activity_type":{"created_at":"2012-08-15T17:33:19Z","id":9,"name":"snow
+        sports","updated_at":"2012-08-15T17:33:19Z"},"thumbnail":null,"rank":null,"rating":0.0}]},{"city":"Fort
+        Collins","state":"Colorado","country":"United States","name":"North Lone Pine","parent_id":null,"unique_id":811,"directions":"Take
+        US 287 north from Ft. Collins or south from Laramie, WY to Red Feather Lakes
+        Road (CR 74E).  Go west 24-25 miles to Deadman Road.  Take Deadman Road 4-5
+        miles to the trailhead on left (well marked).","lat":0.0,"lon":0.0,"description":null,"date_created":null,"children":[],"activities":[{"name":"North
+        Lone Pine","unique_id":"6-305","place_id":811,"activity_type_id":9,"activity_type_name":"snow
+        sports","url":"http://www.snowtoit.com/trail.php?c=73&i=305","attribs":{"\"type\"":"\"Backcountry
+        \\/ Primative\""},"description":"The North Lone Pine Trail is a pretty steep
+        5 mile singletrack trail near Red Feather Lakes in North-Central Colorado.","length":0.0,"activity_type":{"created_at":"2012-08-15T17:33:19Z","id":9,"name":"snow
+        sports","updated_at":"2012-08-15T17:33:19Z"},"thumbnail":null,"rank":null,"rating":0.0}]},{"city":"Woodland
+        Park","state":"Colorado","country":"United States","name":"North Catamount
+        Reservoir","parent_id":null,"unique_id":926,"directions":"There are a number
+        of access points to North and South Catamount Reservoirs, but the easiest,
+        in my opinion, is to head out of Woodland Park via Hwy 24 towards Divide.  Turn
+        left onto Edlow Road, which is about 2.8 miles from WP, and take that all
+        the way to the end (3.5 miles).  There is a parking lot with restrooms.","lat":38.92517,"lon":-105.09612,"description":null,"date_created":null,"children":[],"activities":[{"name":"North
+        Catamount Reservoir","unique_id":"6-362","place_id":926,"activity_type_id":9,"activity_type_name":"snow
+        sports","url":"http://www.snowtoit.com/trail.php?c=73&i=362","attribs":{"\"type\"":"\"Backcountry
+        \\/ Primative\""},"description":"North Catamount Reservoir is a 10 mile loop
+        that utilizes singletrack trails and unimproved roads. It may be passable
+        during the winter on cross country skis or snow shoes.","length":0.0,"activity_type":{"created_at":"2012-08-15T17:33:19Z","id":9,"name":"snow
+        sports","updated_at":"2012-08-15T17:33:19Z"},"thumbnail":null,"rank":null,"rating":0.0}]},{"city":"Grand
+        Lake","state":"Colorado","country":"United States","name":"Stillwater Pass","parent_id":null,"unique_id":877,"directions":"From
+        Grand Lake get on to Highway 34 heading South, as you near Lake Grandby there
+        will be a &lt;br /&gt;sign on the right saying Stillwater Pass 1/4 of a mile
+        away.  Take the next right and keep &lt;br /&gt;following this road.  The
+        road will soon turn to dirt and there will be a parking lot on your right,
+        &lt;br /&gt;drive past it.  Later on there will be a sign at an intersection
+        with an arrow to the left says &lt;br /&gt;Idleglen Staging Area.  Take the
+        left and park at Idleglen Staging area which is a little bit further &lt;br
+        /&gt;and on the left.","lat":40.25331,"lon":-105.83443,"description":null,"date_created":null,"children":[],"activities":[{"name":"Stillwater
+        Pass","unique_id":"6-329","place_id":877,"activity_type_id":9,"activity_type_name":"snow
+        sports","url":"http://www.snowtoit.com/trail.php?c=73&i=329","attribs":{"\"type\"":"\"Backcountry
+        \\/ Primative\""},"description":"The Stillwater pass area has miles and miles
+        of old gravel roads, doubletrack trails, and singletrack that are used by
+        some during the winter for cross country skiing and snow shoeing. Make sure
+        you pick up the Trails Illustrated #115 map for Rand / Stillwater Pass so
+        you don''t get lost.","length":0.0,"activity_type":{"created_at":"2012-08-15T17:33:19Z","id":9,"name":"snow
+        sports","updated_at":"2012-08-15T17:33:19Z"},"thumbnail":null,"rank":null,"rating":0.0}]},{"city":"Georgetown","state":"Colorado","country":"United
+        States","name":"Loveland Ski Area","parent_id":null,"unique_id":15202,"directions":null,"lat":39.715485,"lon":-105.697394,"description":null,"date_created":null,"children":[],"activities":[{"name":"Loveland
+        Ski Area","unique_id":"6-699","place_id":15202,"activity_type_id":9,"activity_type_name":"snow
+        sports","url":"http://www.snowtoit.com/trail.php?c=73&i=699","attribs":{"\"type\"":"\"Lift-serviced
+        \\/ Resort\""},"description":"Loveland Ski Area offers skiers and snowboarders
+        an exhilarating high altitude experience with plenty of snow and slopes for
+        visitors of all ability levels.<br /><br />The summit sits at a lofty 13,010
+        feet, 12,700 of which are lift-serviced. Skiers and snowboarders descend down
+        a vertical drop of 2,210 feet over 1,570 skiable acres. The mountain receives
+        over 400 inches of average annual snowfall so snow is never in short supply.<br
+        /><br />Loveland boasts 93 trails that are rated 13% beginner, 41% intermediate,
+        and 46% advanced. The longest trail is 2 miles. 10 lifts access the trails.
+        Trails include Zippity Split, The Plunge, and Mambo.","length":0.0,"activity_type":{"created_at":"2012-08-15T17:33:19Z","id":9,"name":"snow
+        sports","updated_at":"2012-08-15T17:33:19Z"},"thumbnail":null,"rank":null,"rating":4.0}]},{"city":"Eldora","state":"Colorado","country":"United
+        States","name":"Eldora Mountain Resort","parent_id":null,"unique_id":15198,"directions":null,"lat":39.937886,"lon":-105.584088,"description":null,"date_created":null,"children":[],"activities":[{"name":"Eldora
+        Mountain Resort","unique_id":"6-695","place_id":15198,"activity_type_id":9,"activity_type_name":"snow
+        sports","url":"http://www.snowtoit.com/trail.php?c=73&i=695","attribs":{"\"type\"":"\"Lift-serviced
+        \\/ Resort\""},"description":"With a lofty summit elevation of 10,800 feet
+        and a vertical drop of 1,600 feet, Eldora Mountain has plenty of slope and
+        excitement for skiers and snowboarders of every ability level. Additionally,
+        Eldora''s 680 acres of skiable terrain is covered in 300 inches of snowfall
+        per year. <br /><br />Eldora Mountain boasts approximately 56 trails that
+        are accessed by 10 lifts. The longest trail is 3 miles long. The trails are
+        ranked about 16% easiest, 54% more difficult, 16% most difficult, and 14%
+        extremely difficult (double black diamond). Trails include Bunny Fair, Wayback,
+        Muleshoe, and West Ridge.","length":0.0,"activity_type":{"created_at":"2012-08-15T17:33:19Z","id":9,"name":"snow
+        sports","updated_at":"2012-08-15T17:33:19Z"},"thumbnail":"http://images.snowtoit.com/2011/10/695-0.jpg","rank":null,"rating":0.0}]},{"city":"Dillon","state":"Colorado","country":"United
+        States","name":"Keystone Resort","parent_id":null,"unique_id":715,"directions":"From
+        the Keystone Website: From Denver, take Interstate 70 west through the Eisenhower
+        Tunnel to Dillon, exit 205.  Continue six miles east on U.S. Highway 6.","lat":39.60887,"lon":-105.94436,"description":null,"date_created":null,"children":[],"activities":[{"name":"Keystone
+        Ski Resort","unique_id":"6-1","place_id":715,"activity_type_id":9,"activity_type_name":"snow
+        sports","url":"http://www.snowtoit.com/trail.php?c=73&i=1","attribs":{"\"type\"":"\"Lift-serviced
+        \\/ Resort\""},"description":"With a total vertical drop of 3,128 feet, Keystone
+        offers long runs and plenty of terrain for skiers of all abilities. Trail
+        difficulties are roughly broken into 20% easiest, 30% more difficult, and
+        50% most difficult. The resort boasts over 3,100 skiable acres with snowmaking
+        abilities covering about 600 acres. Keystone has 20 lifts, 135 trails, and
+        gets an average of 230 inches of natural snow each year. The longest run,
+        Schoolmarm, is 3.5 miles long.","length":0.0,"activity_type":{"created_at":"2012-08-15T17:33:19Z","id":9,"name":"snow
+        sports","updated_at":"2012-08-15T17:33:19Z"},"thumbnail":"http://images.snowtoit.com/2011/10/keystone1_0004-0.jpg","rank":null,"rating":4.67}]},{"city":"Pagosa
+        Springs","state":"Colorado","country":"United States","name":"Wolf Creek Ski
+        Area","parent_id":null,"unique_id":15209,"directions":null,"lat":37.474287,"lon":-106.792524,"description":null,"date_created":null,"children":[],"activities":[{"name":"Wolf
+        Creek Ski Area","unique_id":"6-710","place_id":15209,"activity_type_id":9,"activity_type_name":"snow
+        sports","url":"http://www.snowtoit.com/trail.php?c=73&i=710","attribs":{"\"type\"":"\"Lift-serviced
+        \\/ Resort\""},"description":"Wolf Creek boasts a summit elevation of 11,904
+        feet and skiers and snowboarders experience a vertical drop of 1,604 feet.
+        The area receives 465 inches of natural snowfall annually.<br /><br />Wolf
+        Creek has plenty of trails rated 20% beginner, 35% intermediate, 25% advanced,
+        and 20% expert and the longest trail is 2 miles. The lifts that service the
+        mountain have an uphill capacity of 8,480 people per hour. Trails include
+        Glory Hole, Thumper, and Silver Streak.","length":0.0,"activity_type":{"created_at":"2012-08-15T17:33:19Z","id":9,"name":"snow
+        sports","updated_at":"2012-08-15T17:33:19Z"},"thumbnail":"http://images.snowtoit.com/2014/01/1688233_10152203475268447_1416879133-0.jpg","rank":null,"rating":4.0}]},{"city":"Ward","state":"Colorado","country":"United
+        States","name":"South Saint Vrain","parent_id":null,"unique_id":979,"directions":"From
+        Nederland, go north on 72/peak to peak highway.&lt;br /&gt;&lt;br /&gt;Roughly
+        3 miles north of Ward take a left on 96(Beaver Res. Rd on google maps).  Right
+        after you get on 96 there will be the trailhead on the left, the large sign
+        for the trail is about 20 feet or so off the road so its not VERY apparent,
+        I drove clear past it the first time.  Just park along the road.&lt;br /&gt;&lt;br
+        /&gt;Here''s a link to google maps.&lt;br /&gt;&lt;br /&gt;http://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=W+2nd+St%2FCO-72&amp;daddr=Beaver+Res+Rd%2FCounty+Rd-96&amp;geocode=FczHYQIdFAi2-Q%3BFcv1YwIdGmO2-Q&amp;hl=en&amp;mra=ls&amp;sll=40.040232,-105.45639&amp;sspn=0.313312,0.705872&amp;ie=UTF8&amp;t=p&amp;z=11","lat":40.10542,"lon":-105.48834,"description":null,"date_created":null,"children":[],"activities":[{"name":"South
+        Saint Vrain","unique_id":"6-399","place_id":979,"activity_type_id":9,"activity_type_name":"snow
+        sports","url":"http://www.snowtoit.com/trail.php?c=73&i=399","attribs":{"\"type\"":"\"Backcountry
+        \\/ Primative\""},"description":"The South Saint Vrain trail is a 10 mile
+        trek through the woods that is fairly steep for most of its length. As a result,
+        snowshoers will probably have it much easier on this trail than cross country
+        skiers.","length":0.0,"activity_type":{"created_at":"2012-08-15T17:33:19Z","id":9,"name":"snow
+        sports","updated_at":"2012-08-15T17:33:19Z"},"thumbnail":null,"rank":null,"rating":0.0}]},{"city":"Glenwood
+        Springs","state":"Colorado","country":"United States","name":"Sunburst","parent_id":null,"unique_id":18519,"directions":null,"lat":0.0,"lon":0.0,"description":null,"date_created":null,"children":[],"activities":[{"name":"Sunburst","unique_id":"6-1665","place_id":18519,"activity_type_id":9,"activity_type_name":"snow
+        sports","url":"http://www.snowtoit.com/trail.php?c=73&i=1665","attribs":{"\"type\"":"\"Lift-serviced
+        \\/ Resort\""},"description":"Sunburst is a fairly mellow intermediate run
+        off of lift 3 at Sunlight. It can be reached from the White River or Columbine
+        Runs and from the bottom you can ski to either lift 1 or 2.","length":0.0,"activity_type":{"created_at":"2012-08-15T17:33:19Z","id":9,"name":"snow
+        sports","updated_at":"2012-08-15T17:33:19Z"},"thumbnail":null,"rank":null,"rating":0.0}]},{"city":"Glenwood
+        Springs","state":"Colorado","country":"United States","name":"Inspiration","parent_id":null,"unique_id":18525,"directions":null,"lat":0.0,"lon":0.0,"description":null,"date_created":null,"children":[],"activities":[{"name":"Inspiration","unique_id":"6-1671","place_id":18525,"activity_type_id":9,"activity_type_name":"snow
+        sports","url":"http://www.snowtoit.com/trail.php?c=73&i=1671","attribs":{"\"type\"":"\"Lift-serviced
+        \\/ Resort\""},"description":"Inspiration is on Sunlight''s East Ridge and
+        can be reached via upper Defiance from Grizzly Road.  It''s steep and quickly
+        develops bumps.  Ski halfway and then traverse skier''s left to the Alamo
+        Glades.","length":0.0,"activity_type":{"created_at":"2012-08-15T17:33:19Z","id":9,"name":"snow
+        sports","updated_at":"2012-08-15T17:33:19Z"},"thumbnail":null,"rank":null,"rating":3.0}]},{"city":"Snowmass
+        Village","state":"Colorado","country":"United States","name":"Long Shot","parent_id":null,"unique_id":18509,"directions":null,"lat":0.0,"lon":0.0,"description":null,"date_created":null,"children":[],"activities":[{"name":"Long
+        Shot","unique_id":"6-1519","place_id":18509,"activity_type_id":9,"activity_type_name":"snow
+        sports","url":"http://www.snowtoit.com/trail.php?c=73&i=1519","attribs":{"\"type\"":"\"Backcountry
+        \\/ Primative\""},"description":"Long Shot is an in-bounds hike-to gladed
+        blue run at Snowmass.  From the top of the Elk Camp lift turn left and then
+        head out far skier''s right just past the pit toilet.  You''ll see folks hiking
+        up to the top.  This run is five miles long, so be prepared!  It is a fun
+        mellow pitched run through evergreens that ends at the Two Creeks lift.","length":0.0,"activity_type":{"created_at":"2012-08-15T17:33:19Z","id":9,"name":"snow
+        sports","updated_at":"2012-08-15T17:33:19Z"},"thumbnail":"http://images.snowtoit.com/2013/03/Long_SHot-0.jpg","rank":null,"rating":5.0}]},{"city":"Crested
+        Butte","state":"Colorado","country":"United States","name":"Crested Butte
+        Mountain Resort","parent_id":null,"unique_id":1079,"directions":"From the
+        town of Crested Butte, drive north up the mountain on Hwy. 135 for &lt;br
+        /&gt;&lt;br /&gt;about 2 miles. Once in the town of Mount Crested Butte, just
+        follow signs for &lt;br /&gt;&lt;br /&gt;Crested Butte Mountain Resort. Park
+        in one of the day parking areas.","lat":38.89735,"lon":-106.9674,"description":null,"date_created":null,"children":[],"activities":[{"name":"Crested
+        Butte Mountain Resort","unique_id":"6-692","place_id":1079,"activity_type_id":9,"activity_type_name":"snow
+        sports","url":"http://www.snowtoit.com/trail.php?c=73&i=692","attribs":{"\"type\"":"\"Lift-serviced
+        \\/ Resort\""},"description":"Crested Butte Mountain sits at a lofty elevation
+        of 12,162 feet and takes skiers and snowboarders down a vertical drop of 2,787
+        feet to a base elevation of 9,375 feet. This high altitude resort has plenty
+        to offer to skiers and snowboarders of all abilities. <br /><br />The resort
+        boasts a whopping 121 trails that are accessed by 16 lifts. The lifts have
+        an uphill capacity of a speedy 20,310 people per hour. The longest trail is
+        2.6 miles. The trails are ranked 23% beginner, 57% intermediate, and 20% advanced.
+        The trails are covered by 300 inches of average annual snowfall.","length":0.0,"activity_type":{"created_at":"2012-08-15T17:33:19Z","id":9,"name":"snow
+        sports","updated_at":"2012-08-15T17:33:19Z"},"thumbnail":"http://images.snowtoit.com/2011/08/mt_crested_butte1-0.jpg","rank":null,"rating":4.0}]},{"city":"Steamboat
+        Springs","state":"Colorado","country":"United States","name":"Howelsen Hill
+        Ski Area","parent_id":null,"unique_id":15200,"directions":null,"lat":40.483998,"lon":-106.837574,"description":null,"date_created":null,"children":[],"activities":[{"name":"Howelsen
+        Hill Ski Area","unique_id":"6-697","place_id":15200,"activity_type_id":9,"activity_type_name":"snow
+        sports","url":"http://www.snowtoit.com/trail.php?c=73&i=697","attribs":{"\"type\"":"\"Lift-serviced
+        \\/ Resort\""},"description":"Howelsen Hill offers 440 feet of vertical drop
+        from a summit of 7,136 feet and boasts trails for skiers and snowboarders
+        of all skill levels.<br /><br />Howelsen has 12 downhill trails that are accessed
+        by 6 lifts. The ski area also has 20 km of cross-country trails. The longest
+        trail is 1 mile. Trails include Ridge Run, Emerald Meadows, and Mile Run.","length":0.0,"activity_type":{"created_at":"2012-08-15T17:33:19Z","id":9,"name":"snow
+        sports","updated_at":"2012-08-15T17:33:19Z"},"thumbnail":"http://images.snowtoit.com/2011/10/697-0.jpg","rank":null,"rating":0.0}]},{"city":"Boulder","state":"Colorado","country":"United
+        States","name":"Rabbit Mountain","parent_id":null,"unique_id":14121,"directions":null,"lat":40.245957,"lon":-105.224629,"description":null,"date_created":null,"children":[],"activities":[{"name":"Rabbit
+        Mountain","unique_id":"6-1081","place_id":14121,"activity_type_id":9,"activity_type_name":"snow
+        sports","url":"http://www.snowtoit.com/trail.php?c=73&i=1081","attribs":{"\"type\"":"\"Backcountry
+        \\/ Primative\""},"description":"Rabbit Mountain offers 5.6 miles of trails
+        and a gorgeous view of the Continental Divide to those who enjoy snow shoeing.
+        Conditions are usually best within 24 hours of a local snowfall.","length":0.0,"activity_type":{"created_at":"2012-08-15T17:33:19Z","id":9,"name":"snow
+        sports","updated_at":"2012-08-15T17:33:19Z"},"thumbnail":null,"rank":null,"rating":0.0}]},{"city":"Nederland","state":"Colorado","country":"United
+        States","name":"West Magnolia","parent_id":null,"unique_id":842,"directions":"From
+        Nederland, take 119 South for about 1 mile.  On the West side, across from
+        Magnolia (County Hwy 132) is the trailhead.","lat":39.9502,"lon":-105.50445,"description":null,"date_created":null,"children":[],"activities":[{"name":"West
+        Magnolia","unique_id":"6-318","place_id":842,"activity_type_id":9,"activity_type_name":"snow
+        sports","url":"http://www.snowtoit.com/trail.php?c=73&i=318","attribs":{"\"type\"":"\"Backcountry
+        \\/ Primative\""},"description":"This trail network features several doubletrack
+        trails and old road grades that are perfect for cross country skiing! There''s
+        at least 9 miles of trails in this area. Get ready to explore!","length":0.0,"activity_type":{"created_at":"2012-08-15T17:33:19Z","id":9,"name":"snow
+        sports","updated_at":"2012-08-15T17:33:19Z"},"thumbnail":null,"rank":null,"rating":0.0}]}]}'
+    http_version: 
+  recorded_at: Mon, 07 Mar 2016 01:08:38 GMT
+recorded_with: VCR 3.0.1
