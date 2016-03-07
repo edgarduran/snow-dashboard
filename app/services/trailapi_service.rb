@@ -11,12 +11,16 @@ class TrailapiService
     end
   end
 
-  def some_info
-    parse_json(connection.get("?limit=20&q[activities_activity_type_name_eq]=snow+sports&q[state_cont]=Colorado"))
-  end
-
   def search_results(params)
-    results = parse_json(connection.get("?limit=50&q[activities_activity_name_cont]=#{params[:resort_name]}&q[activities_activity_type_name_eq]=snow+sports&q[state_cont]=Colorado"))
+    if params[:city].empty? && params[:resort_name].empty?
+      results = parse_json(connection.get("?limit=75&q[activities_activity_type_name_eq]=snow+sports&q[state_cont]=#{params[:state]}"))
+    elsif params[:city].empty?
+      results = parse_json(connection.get("?limit=50&q[activities_activity_name_cont]=#{params[:resort_name]}&q[activities_activity_type_name_eq]=snow+sports&q[state_cont]=#{params[:state]}"))
+    elsif params[:resort_name].empty?
+      results = parse_json(connection.get("?limit=50&q[activities_activity_type_name_eq]=snow+sports&q[city_cont]=#{params[:city]}&q[state_cont]=#{params[:state]}"))
+    else
+      results = parse_json(connection.get("?limit=20&q[activities_activity_name_cont]=#{params[:resort_name]}&q[activities_activity_type_name_eq]=snow+sports&q[city_cont]=#{params[:city]}&q[state_cont]=#{params[:state]}"))
+    end
     clean_up_search(results, params)
   end
 

@@ -13,3 +13,23 @@
  *= require_tree .
  *= require_self
  */
+
+ .resort-card {
+  background-color: red;
+  margin: 8px;
+  padding: 8px;
+}
+
+.mtn-desc{
+    width: 420px;
+    height: 175px;
+    margin: 18px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}​
+
+.thumbnail{
+  width: 100px;
+  height: 110px;
+  overflow:hidden;
+}
