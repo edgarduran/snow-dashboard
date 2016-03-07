@@ -1,21 +1,17 @@
-<div>
-  <input type="search" placeholder="Search Bar">
-</div>
 <h1 class="text-center"><%= current_user.name %>'s Dashboard</h1>
+<div>
+  <h3>Add a ski area to your dashboard</h3>
+  <%= render partial: 'partials/resort_search' %>
+  <% unless current_user.phone_number %>
+    <div class="phone">
+      <%= render partial: 'partials/phone_number_form' %>
+    </div>
+  <% end %>
+</div>
 <% if current_user.resorts == [] %>
   <h3>Your dashboard is empty add your favorite resorts to begin playing</h3>
 <% else %>
   <div class="resorts">
     <%= render partial: 'partials/users_resorts' %>
-  </div>
-<% end %>
-
-<div class="search">
-  <%= render partial: 'partials/resort_search' %>
-</div>
-
-<% unless current_user.phone_number %>
-  <div class="phone">
-    <%= render partial: 'partials/phone_number_form' %>
   </div>
 <% end %>

@@ -1,6 +1,6 @@
 <div class="row">
   <% @resorts.each_with_index do |resort, index| %>
-    <div class="col-md-4 col-sm-6">
+    <div class="col-md-5 center resort-card">
         <h3 class="text-center"><%= resort.official_name %></h3>
         <div class="resort-title">
             <div class="col-md-4 col-sm-4">
@@ -15,7 +15,7 @@
                     <li>Prob: <%= @forecast[index][0][:precip_prob] %> </li>
                     <li>Hum: <%= @forecast[index][0][:humidity] %> </li>
                 </ul>
-            </div>
+          </div>
             <div class="col-md-4 col-sm-4">
               <div class="thumbnail">
                   <%= image_tag "#{@forecast[index][1][:icon]}.png", class: "thumbnail"%>
@@ -42,7 +42,9 @@
                     <li>Hum: <%= @forecast[index][2][:humidity] %> </li>
                 </ul><br>
             </div>
-            <p class"text-center">This paragraph is the mountan description. It should go at the bottom of the 3 columns and stay here. Remember to limit the character count and to try tio clean up the text.</p>
+              <div class="mtn-desc text-center">
+                <p><%= resort[:description] %></p>
+              </div>
         </div>
     </div>
   <% end %>
