@@ -1,16 +1,21 @@
 class DashboardController < ApplicationController
 
   def index
-    @user_info = current_user
-    @resorts   = current_user.resorts
-    @states    = state_list
-    @forecast  = forecast_service.three_day_forecast(@resorts)
+    @user_info   = current_user
+    @resorts     = current_user.resorts
+    @states      = state_list
+    @forecast    = forecast_service.three_day_forecast(@resorts)
+    @recent_snow = historical_snowfall_service.twenty_five_day_snow
   end
 
   private
 
   def forecast_service
     ForecastService.new
+  end
+
+  def historical_snowfall_service
+    HistoricalSnowfallService.new
   end
 
   def state_list
