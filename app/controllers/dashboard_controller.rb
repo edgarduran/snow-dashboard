@@ -6,7 +6,6 @@ class DashboardController < ApplicationController
     @states      = state_list
     @forecast    = forecast_service.three_day_forecast(@resorts)
     @recent_snow = historical_snowfall_service.twenty_five_day_snow
-    @geocode      = geocoding_service.check
   end
 
   private
@@ -17,10 +16,6 @@ class DashboardController < ApplicationController
 
   def historical_snowfall_service
     HistoricalSnowfallService.new
-  end
-
-  def geocoding_service
-    GeocodingService.new
   end
 
   def state_list
