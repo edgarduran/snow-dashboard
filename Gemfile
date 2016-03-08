@@ -15,6 +15,7 @@ gem 'pry-rails'
 gem 'faraday'
 gem 'twilio-ruby', '~> 4.11.1'
 gem 'forecast_io'
+gem 'geocoder'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -22,7 +23,7 @@ group :test do
   gem 'byebug'
   gem 'capybara'
   gem 'mocha'
-  gem 'launchy'  
+  gem 'launchy'
   gem 'simplecov'
   gem 'webmock'
   gem 'vcr'
