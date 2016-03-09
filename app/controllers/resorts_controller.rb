@@ -12,7 +12,8 @@ class ResortsController < ApplicationController
                     description:   params[:description],
                     latitude:      params[:latitude],
                     longitude:     params[:longitude],
-                    user_id:       params[:user_id].to_i
+                    user_id:       params[:user_id].to_i,
+                    zip_code:      geocoding_service.zip(params[:latitude].to_f, params[:longitude].to_f)
                         )
     if @resort.save
       redirect_to dashboard_index_path
@@ -27,6 +28,10 @@ class ResortsController < ApplicationController
   private
   def trailapi_service
     TrailapiService.new
+  end
+
+  def geocoding_service
+    GeocodingService.new
   end
 
 end

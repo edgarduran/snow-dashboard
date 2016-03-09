@@ -5,10 +5,10 @@
         <div class="resort-title">
             <div class="col-md-4 col-sm-4">
               <div class="thumbnail">
-                  <%= image_tag "#{@forecast[index][0][:icon]}.png", class: "thumbnail"%>
-                  <p class="text-center"><%= @forecast[index][0][:summary] %></p>
+                <h4 class="text-center">Today</h4>
+                <%= image_tag "#{@forecast[index][0][:icon]}.png", class: "thumbnail"%>
+                <p class="text-center"><%= @forecast[index][0][:summary] %></p>
               </div>
-              <h5>Today</h5>
                 <ul class="list-unstyled">
                     <li>Max: <%= @forecast[index][0][:max_temp] %> </li>
                     <li>Min: <%= @forecast[index][0][:min_temp] %></li>
@@ -18,10 +18,10 @@
           </div>
             <div class="col-md-4 col-sm-4">
               <div class="thumbnail">
-                  <%= image_tag "#{@forecast[index][1][:icon]}.png", class: "thumbnail"%>
-                  <p class="text-center"><%= @forecast[index][1][:summary] %></p>
+                <h4 class="text-center"><%= DateTime.tomorrow.strftime("%A") %></h4>
+                <%= image_tag "#{@forecast[index][1][:icon]}.png", class: "thumbnail"%>
+                <p class="text-center"><%= @forecast[index][1][:summary] %></p>
               </div>
-              <h5><%= DateTime.tomorrow.strftime("%A") %></h5>
                 <ul class="list-unstyled">
                     <li>Max: <%= @forecast[index][1][:max_temp] %> </li>
                     <li>Min: <%= @forecast[index][1][:min_temp] %></li>
@@ -31,10 +31,10 @@
             </div>
             <div class="col-md-4 col-sm-4">
                 <div class="thumbnail">
-                    <%= image_tag "#{@forecast[index][2][:icon]}.png", class: "thumbnail"%>
-                    <p class="text-center"><%= @forecast[index][2][:summary] %></p>
+                  <h4 class="text-center"><%= (DateTime.tomorrow + 1).strftime("%A") %></h4>
+                  <%= image_tag "#{@forecast[index][2][:icon]}.png", class: "thumbnail"%>
+                  <p class="text-center"><%= @forecast[index][2][:summary] %></p>
                 </div>
-                <h5><%= (DateTime.tomorrow + 1).strftime("%A") %></h5>
                 <ul class="list-unstyled">
                     <li>Max: <%= @forecast[index][2][:max_temp] %> </li>
                     <li>Min: <%= @forecast[index][2][:min_temp] %></li>
@@ -42,6 +42,7 @@
                     <li>Hum: <%= @forecast[index][2][:humidity] %> </li>
                 </ul><br>
             </div>
+              <h2 class="text-center">Snow in the last 25 days: <%= @recent_snow[index].round(4) %> inches</h2>
               <div class="mtn-desc text-center">
                 <p><%= resort[:description] %></p>
               </div>
