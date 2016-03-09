@@ -21,13 +21,6 @@ class ForecastService
     end
   end
 
-  def five_day_forecast(user_resorts)
-    user_resorts.map do |resort|
-      full_forecast = parse_json(connection.get("#{resort[:latitude].to_f},#{resort[:longitude].to_f}?exclude=[minutely,flags,hourly]"))
-      limit_days(full_forecast, 4)
-    end
-  end
-
   def limit_days(data, days)
     days = data[:daily][:data][0..days]
     days.map do |day|
