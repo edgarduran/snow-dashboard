@@ -1,6 +1,7 @@
 <div class="row">
   <% @resorts.each_with_index do |resort, index| %>
     <div class="col-md-5 center resort-card">
+        <%= link_to "X", resort_path(resort.id), method: :delete, class: "btn btn-danger" %>
         <h3 class="text-center"><%= resort.official_name %></h3>
         <div class="resort-title">
             <div class="col-md-4 col-sm-4">
@@ -42,7 +43,7 @@
                     <li>Hum: <%= @forecast[index][2][:humidity] %> </li>
                 </ul><br>
             </div>
-              <h2 class="text-center">Snow in the last 25 days: <%= @recent_snow[index].round(4) %> inches</h2>
+              <h2 class="text-center">Snow in the last 25 days: <%= @recent_snow[index] %> inches</h2>
               <div class="mtn-desc text-center">
                 <p><%= resort[:description] %></p>
               </div>

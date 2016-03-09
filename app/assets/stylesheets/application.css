@@ -13,9 +13,23 @@
  *= require_tree .
  *= require_self
  */
+ .dash-bkg {
+     background-image: url("winter-abstract.jpg");
+     background-size: 100%;
+     background-repeat:no-repeat;
+     background-attachment: fixed;
+ }
+
+ .landing {
+     background-image: url("ski_home.jpg");
+     background-size: 100%;
+     background-repeat:no-repeat;
+ }
 
  .resort-card {
-  background-color: red;
+  background-color: #0000cc;
+  color: white;
+  opacity: 0.75;
   margin: 8px;
   padding: 8px;
 }
