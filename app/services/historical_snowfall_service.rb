@@ -11,7 +11,7 @@ class HistoricalSnowfallService
 
   def twenty_five_day_snow(resorts)
     resorts.map do |resort|
-      days = parse_json(connection.get("history_by_postal_code.json?period=day&postal_code_eq=#{resort[:zip_code]}&country_eq=US&timestamp_between=2016-01-01T08:00+00:00,2016-01-31T23:00+00:00&limit=25&fields=postal_code,tempAvg,precip,snowfall,timestamp"))
+      days = parse_json(connection.get("history_by_postal_code.json?period=day&postal_code_eq=#{resort[:zip_code]}&country_eq=US&timestamp_between=#{(DateTime.now - 25).strftime("%Y-%m-%dT%H:%M+%H:%M")},#{DateTime.now.strftime("%Y-%m-%dT%H:%M+%H:%M")}&limit=25&fields=postal_code,tempAvg,precip,snowfall,timestamp"))
       calculate_snowfall(days)
     end
   end
