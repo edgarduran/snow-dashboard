@@ -17,11 +17,18 @@ class ResortsController < ApplicationController
                         )
     if @resort.save
       redirect_to dashboard_index_path
-      flash[:success] = "#{@resort.official_name} has been addes to your dashboard."
+      flash[:success] = "#{@resort.official_name} has been added to your dashboard."
     else
       redirect_to '/'
       flash[:error] = "Uh-oh, something went wrong."
     end
+  end
+
+  def destroy
+    resort = Resort.find(params[:id])
+    resort.delete
+    flash[:deleted] = "You have removed #{resort.name} from your dashboard"
+    redirect_to dashboard_index_path
   end
 
 
