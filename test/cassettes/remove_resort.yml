@@ -1,0 +1,639 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://trailapi-trailapi.p.mashape.com/?limit=50&q%5Bactivities_activity_type_name_eq%5D=snow%20sports&q%5Bcity_cont%5D=georgetown&q%5Bstate_cont%5D=Colorado
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Mashape-Key:
+      - O08i6kp55lmsh5eIf5vs5kxXOVXRp1rwwswjsnOwrws1QwF4nb
+      Accept:
+      - text/plain
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 09 Mar 2016 20:37:57 GMT
+      Etag:
+      - '"eefb935b8fe72fa5c50f6f8dc550e10c"'
+      Server:
+      - Mashape/5.0.6
+      Via:
+      - 1.1 vegur
+      X-Rack-Cache:
+      - miss
+      X-Request-Id:
+      - 2cb6785d-c0d4-4690-a1ec-d00f31f2f66a
+      X-Runtime:
+      - '0.047995'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '1327'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"places":[{"city":"Georgetown","state":"Colorado","country":"United
+        States","name":"Loveland Ski Area","parent_id":null,"unique_id":15202,"directions":null,"lat":39.715485,"lon":-105.697394,"description":null,"date_created":null,"children":[],"activities":[{"name":"Loveland
+        Ski Area","unique_id":"6-699","place_id":15202,"activity_type_id":9,"activity_type_name":"snow
+        sports","url":"http://www.snowtoit.com/trail.php?c=73&i=699","attribs":{"\"type\"":"\"Lift-serviced
+        \\/ Resort\""},"description":"Loveland Ski Area offers skiers and snowboarders
+        an exhilarating high altitude experience with plenty of snow and slopes for
+        visitors of all ability levels.<br /><br />The summit sits at a lofty 13,010
+        feet, 12,700 of which are lift-serviced. Skiers and snowboarders descend down
+        a vertical drop of 2,210 feet over 1,570 skiable acres. The mountain receives
+        over 400 inches of average annual snowfall so snow is never in short supply.<br
+        /><br />Loveland boasts 93 trails that are rated 13% beginner, 41% intermediate,
+        and 46% advanced. The longest trail is 2 miles. 10 lifts access the trails.
+        Trails include Zippity Split, The Plunge, and Mambo.","length":0.0,"activity_type":{"created_at":"2012-08-15T17:33:19Z","id":9,"name":"snow
+        sports","updated_at":"2012-08-15T17:33:19Z"},"thumbnail":null,"rank":null,"rating":4.0}]}]}'
+    http_version: 
+  recorded_at: Wed, 09 Mar 2016 20:37:57 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyAqFCE_WcES8oPiBY4bbNSS3r6p-9BtIgM&latlng=39.715485,-105.697394
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 09 Mar 2016 20:37:57 GMT
+      Expires:
+      - Thu, 10 Mar 2016 20:37:57 GMT
+      Cache-Control:
+      - public, max-age=86400
+      Vary:
+      - Accept-Language
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alternate-Protocol:
+      - 443:quic,p=1
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="31,30,29,28,27,26,25"
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "results" : [
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Old Georgetown Road",
+                       "short_name" : "Old Georgetown Rd",
+                       "types" : [ "route" ]
+                    },
+                    {
+                       "long_name" : "Georgetown",
+                       "short_name" : "Georgetown",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Clear Creek County",
+                       "short_name" : "Clear Creek County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Colorado",
+                       "short_name" : "CO",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    },
+                    {
+                       "long_name" : "80444",
+                       "short_name" : "80444",
+                       "types" : [ "postal_code" ]
+                    }
+                 ],
+                 "formatted_address" : "Old Georgetown Rd, Georgetown, CO 80444, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 39.7184264,
+                          "lng" : -105.6970549
+                       },
+                       "southwest" : {
+                          "lat" : 39.715483,
+                          "lng" : -105.6973225
+                       }
+                    },
+                    "location" : {
+                       "lat" : 39.7169482,
+                       "lng" : -105.6972009
+                    },
+                    "location_type" : "GEOMETRIC_CENTER",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.7184264,
+                          "lng" : -105.6958397197085
+                       },
+                       "southwest" : {
+                          "lat" : 39.715483,
+                          "lng" : -105.6985376802915
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJtdtmNPqta4cRUadLk_uxs98",
+                 "types" : [ "route" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Georgetown",
+                       "short_name" : "Georgetown",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Clear Creek County",
+                       "short_name" : "Clear Creek County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Colorado",
+                       "short_name" : "CO",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Georgetown, CO, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 39.7339529,
+                          "lng" : -105.686627
+                       },
+                       "southwest" : {
+                          "lat" : 39.7016909,
+                          "lng" : -105.704931
+                       }
+                    },
+                    "location" : {
+                       "lat" : 39.70609839999999,
+                       "lng" : -105.6975041
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.7339529,
+                          "lng" : -105.686627
+                       },
+                       "southwest" : {
+                          "lat" : 39.7016909,
+                          "lng" : -105.704931
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJx08VvhZTaocR7CI8VHxQvUs",
+                 "types" : [ "locality", "political" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "80444",
+                       "short_name" : "80444",
+                       "types" : [ "postal_code" ]
+                    },
+                    {
+                       "long_name" : "Georgetown",
+                       "short_name" : "Georgetown",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Clear Creek County",
+                       "short_name" : "Clear Creek County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Colorado",
+                       "short_name" : "CO",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Georgetown, CO 80444, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 39.744416,
+                          "lng" : -105.685804
+                       },
+                       "southwest" : {
+                          "lat" : 39.68283,
+                          "lng" : -105.722306
+                       }
+                    },
+                    "location" : {
+                       "lat" : 39.7104468,
+                       "lng" : -105.6969788
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.744416,
+                          "lng" : -105.685804
+                       },
+                       "southwest" : {
+                          "lat" : 39.68283,
+                          "lng" : -105.722306
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJy9ZI-9Ssa4cRVkC1sHJ_pgc",
+                 "types" : [ "postal_code" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Clear Creek County",
+                       "short_name" : "Clear Creek County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Colorado",
+                       "short_name" : "CO",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Clear Creek County, CO, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 39.851996,
+                          "lng" : -105.397949
+                       },
+                       "southwest" : {
+                          "lat" : 39.564865,
+                          "lng" : -105.92703
+                       }
+                    },
+                    "location" : {
+                       "lat" : 39.6904464,
+                       "lng" : -105.6412527
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.851996,
+                          "lng" : -105.397949
+                       },
+                       "southwest" : {
+                          "lat" : 39.564865,
+                          "lng" : -105.92703
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJr3DC7TOla4cRP3Q6xF1Y7wU",
+                 "types" : [ "administrative_area_level_2", "political" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Colorado",
+                       "short_name" : "CO",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Colorado, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 41.0034439,
+                          "lng" : -102.040878
+                       },
+                       "southwest" : {
+                          "lat" : 36.992424,
+                          "lng" : -109.060256
+                       }
+                    },
+                    "location" : {
+                       "lat" : 39.5500507,
+                       "lng" : -105.7820674
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 41.0034439,
+                          "lng" : -102.040878
+                       },
+                       "southwest" : {
+                          "lat" : 36.992424,
+                          "lng" : -109.060256
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJt1YYm3QUQIcR_6eQSTGDVMc",
+                 "types" : [ "administrative_area_level_1", "political" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "United States",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 71.3867745,
+                          "lng" : -66.9502861
+                       },
+                       "southwest" : {
+                          "lat" : 18.9106768,
+                          "lng" : 172.4458955
+                       }
+                    },
+                    "location" : {
+                       "lat" : 37.09024,
+                       "lng" : -95.712891
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 49.38,
+                          "lng" : -66.94
+                       },
+                       "southwest" : {
+                          "lat" : 25.82,
+                          "lng" : -124.39
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJCzYy5IS16lQRQrfeQ5K5Oxw",
+                 "types" : [ "country", "political" ]
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Wed, 09 Mar 2016 20:37:57 GMT
+- request:
+    method: get
+    uri: https://api.forecast.io/forecast/2f0b7cab287907f249c7216344eea871/39.715485,-105.697394?exclude=%5Bminutely,flags,hourly%5D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Wed, 09 Mar 2016 20:37:58 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      X-Forecast-Api-Calls:
+      - '310'
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Wed, 09 Mar 2016 21:37:58 +0000
+      X-Content-Type-Options:
+      - nosniff
+      X-Response-Time:
+      - 75.507ms
+      X-Hostname:
+      - 22.api
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJsYXRpdHVkZSI6MzkuNzE1NDg1LCJsb25naXR1ZGUiOi0xMDUuNjk3Mzk0
+        LCJ0aW1lem9uZSI6IkFtZXJpY2EvRGVudmVyIiwib2Zmc2V0IjotNywiY3Vy
+        cmVudGx5Ijp7InRpbWUiOjE0NTc1NTU4NzgsInN1bW1hcnkiOiJQYXJ0bHkg
+        Q2xvdWR5IiwiaWNvbiI6InBhcnRseS1jbG91ZHktZGF5IiwibmVhcmVzdFN0
+        b3JtRGlzdGFuY2UiOjEsIm5lYXJlc3RTdG9ybUJlYXJpbmciOjczLCJwcmVj
+        aXBJbnRlbnNpdHkiOjAsInByZWNpcFByb2JhYmlsaXR5IjowLCJ0ZW1wZXJh
+        dHVyZSI6MzIuNzIsImFwcGFyZW50VGVtcGVyYXR1cmUiOjI4LjQsImRld1Bv
+        aW50IjoxNC4yNywiaHVtaWRpdHkiOjAuNDYsIndpbmRTcGVlZCI6NC40OSwi
+        d2luZEJlYXJpbmciOjI0MSwidmlzaWJpbGl0eSI6OS44MSwiY2xvdWRDb3Zl
+        ciI6MC41OSwicHJlc3N1cmUiOjEwMTIuMDcsIm96b25lIjozNTEuN30sImRh
+        aWx5Ijp7InN1bW1hcnkiOiJTbm93ICg04oCTNyBpbi4pIHRocm91Z2hvdXQg
+        dGhlIHdlZWssIHdpdGggdGVtcGVyYXR1cmVzIHBlYWtpbmcgYXQgNTHCsEYg
+        b24gRnJpZGF5LiIsImljb24iOiJzbm93IiwiZGF0YSI6W3sidGltZSI6MTQ1
+        NzUwNjgwMCwic3VtbWFyeSI6IkxpZ2h0IHNub3cgc3RhcnRpbmcgaW4gdGhl
+        IGFmdGVybm9vbiwgY29udGludWluZyB1bnRpbCBldmVuaW5nLiIsImljb24i
+        OiJzbm93Iiwic3VucmlzZVRpbWUiOjE0NTc1Mjk4NTUsInN1bnNldFRpbWUi
+        OjE0NTc1NzE4OTUsIm1vb25QaGFzZSI6MC4wMywicHJlY2lwSW50ZW5zaXR5
+        IjowLjAwMTEsInByZWNpcEludGVuc2l0eU1heCI6MC4wMDY2LCJwcmVjaXBJ
+        bnRlbnNpdHlNYXhUaW1lIjoxNDU3NTAzMjAwLCJwcmVjaXBQcm9iYWJpbGl0
+        eSI6MC4zMSwicHJlY2lwVHlwZSI6InNub3ciLCJwcmVjaXBBY2N1bXVsYXRp
+        b24iOjAuMzA1LCJ0ZW1wZXJhdHVyZU1pbiI6MTUuNjcsInRlbXBlcmF0dXJl
+        TWluVGltZSI6MTQ1NzUyNDgwMCwidGVtcGVyYXR1cmVNYXgiOjMyLjg3LCJ0
+        ZW1wZXJhdHVyZU1heFRpbWUiOjE0NTc1NTM2MDAsImFwcGFyZW50VGVtcGVy
+        YXR1cmVNaW4iOjUuNTcsImFwcGFyZW50VGVtcGVyYXR1cmVNaW5UaW1lIjox
+        NDU3NTI0ODAwLCJhcHBhcmVudFRlbXBlcmF0dXJlTWF4IjoyOS4zMiwiYXBw
+        YXJlbnRUZW1wZXJhdHVyZU1heFRpbWUiOjE0NTc1NTM2MDAsImRld1BvaW50
+        IjoxNS4wMSwiaHVtaWRpdHkiOjAuNywid2luZFNwZWVkIjo2LjE0LCJ3aW5k
+        QmVhcmluZyI6MjcwLCJ2aXNpYmlsaXR5Ijo4LjM3LCJjbG91ZENvdmVyIjow
+        LjM3LCJwcmVzc3VyZSI6MTAxNS44Nywib3pvbmUiOjM0Ni42Nn0seyJ0aW1l
+        IjoxNDU3NTkzMjAwLCJzdW1tYXJ5IjoiUGFydGx5IGNsb3VkeSBvdmVybmln
+        aHQuIiwiaWNvbiI6InBhcnRseS1jbG91ZHktbmlnaHQiLCJzdW5yaXNlVGlt
+        ZSI6MTQ1NzYxNjE2MCwic3Vuc2V0VGltZSI6MTQ1NzY1ODM1NywibW9vblBo
+        YXNlIjowLjA2LCJwcmVjaXBJbnRlbnNpdHkiOjAsInByZWNpcEludGVuc2l0
+        eU1heCI6MCwicHJlY2lwUHJvYmFiaWxpdHkiOjAsInRlbXBlcmF0dXJlTWlu
+        IjoxNy41NywidGVtcGVyYXR1cmVNaW5UaW1lIjoxNDU3NjA3NjAwLCJ0ZW1w
+        ZXJhdHVyZU1heCI6NDUuMjYsInRlbXBlcmF0dXJlTWF4VGltZSI6MTQ1NzY0
+        NzIwMCwiYXBwYXJlbnRUZW1wZXJhdHVyZU1pbiI6Ny4xMywiYXBwYXJlbnRU
+        ZW1wZXJhdHVyZU1pblRpbWUiOjE0NTc2MDc2MDAsImFwcGFyZW50VGVtcGVy
+        YXR1cmVNYXgiOjQ1LjI2LCJhcHBhcmVudFRlbXBlcmF0dXJlTWF4VGltZSI6
+        MTQ1NzY0NzIwMCwiZGV3UG9pbnQiOjIwLjE2LCJodW1pZGl0eSI6MC42Nywi
+        d2luZFNwZWVkIjo1LjEyLCJ3aW5kQmVhcmluZyI6MjczLCJ2aXNpYmlsaXR5
+        Ijo5Ljk0LCJjbG91ZENvdmVyIjowLjEsInByZXNzdXJlIjoxMDIyLjUyLCJv
+        em9uZSI6MzAyLjQ0fSx7InRpbWUiOjE0NTc2Nzk2MDAsInN1bW1hcnkiOiJN
+        b3N0bHkgY2xvdWR5IHN0YXJ0aW5nIGluIHRoZSBldmVuaW5nLiIsImljb24i
+        OiJwYXJ0bHktY2xvdWR5LW5pZ2h0Iiwic3VucmlzZVRpbWUiOjE0NTc3MDI0
+        NjUsInN1bnNldFRpbWUiOjE0NTc3NDQ4MTksIm1vb25QaGFzZSI6MC4xLCJw
+        cmVjaXBJbnRlbnNpdHkiOjAsInByZWNpcEludGVuc2l0eU1heCI6MCwicHJl
+        Y2lwUHJvYmFiaWxpdHkiOjAsInRlbXBlcmF0dXJlTWluIjoyMy42OSwidGVt
+        cGVyYXR1cmVNaW5UaW1lIjoxNDU3Njk3NjAwLCJ0ZW1wZXJhdHVyZU1heCI6
+        NTEuMjgsInRlbXBlcmF0dXJlTWF4VGltZSI6MTQ1NzczMDAwMCwiYXBwYXJl
+        bnRUZW1wZXJhdHVyZU1pbiI6MTYuMzMsImFwcGFyZW50VGVtcGVyYXR1cmVN
+        aW5UaW1lIjoxNDU3Njk3NjAwLCJhcHBhcmVudFRlbXBlcmF0dXJlTWF4Ijo1
+        MS4yOCwiYXBwYXJlbnRUZW1wZXJhdHVyZU1heFRpbWUiOjE0NTc3MzAwMDAs
+        ImRld1BvaW50IjoyNC41MSwiaHVtaWRpdHkiOjAuNjMsIndpbmRTcGVlZCI6
+        My4xMywid2luZEJlYXJpbmciOjIyNSwidmlzaWJpbGl0eSI6MTAsImNsb3Vk
+        Q292ZXIiOjAuMzQsInByZXNzdXJlIjoxMDE4LCJvem9uZSI6MjgwLjIyfSx7
+        InRpbWUiOjE0NTc3NjYwMDAsInN1bW1hcnkiOiJMaWdodCBzbm93ICh1bmRl
+        ciAxIGluLikgc3RhcnRpbmcgaW4gdGhlIGV2ZW5pbmcuIiwiaWNvbiI6InNu
+        b3ciLCJzdW5yaXNlVGltZSI6MTQ1Nzc4ODc2OSwic3Vuc2V0VGltZSI6MTQ1
+        NzgzMTI4MSwibW9vblBoYXNlIjowLjE0LCJwcmVjaXBJbnRlbnNpdHkiOjAu
+        MDAzLCJwcmVjaXBJbnRlbnNpdHlNYXgiOjAuMDEyMywicHJlY2lwSW50ZW5z
+        aXR5TWF4VGltZSI6MTQ1Nzg0MTYwMCwicHJlY2lwUHJvYmFiaWxpdHkiOjAu
+        NTQsInByZWNpcFR5cGUiOiJzbm93IiwicHJlY2lwQWNjdW11bGF0aW9uIjow
+        LjU1MiwidGVtcGVyYXR1cmVNaW4iOjI5Ljc5LCJ0ZW1wZXJhdHVyZU1pblRp
+        bWUiOjE0NTc3ODA0MDAsInRlbXBlcmF0dXJlTWF4Ijo0OC4zMywidGVtcGVy
+        YXR1cmVNYXhUaW1lIjoxNDU3ODA5MjAwLCJhcHBhcmVudFRlbXBlcmF0dXJl
+        TWluIjoyMi4zNiwiYXBwYXJlbnRUZW1wZXJhdHVyZU1pblRpbWUiOjE0NTc3
+        ODA0MDAsImFwcGFyZW50VGVtcGVyYXR1cmVNYXgiOjQ3LjE3LCJhcHBhcmVu
+        dFRlbXBlcmF0dXJlTWF4VGltZSI6MTQ1NzgwOTIwMCwiZGV3UG9pbnQiOjI2
+        LjI1LCJodW1pZGl0eSI6MC42Niwid2luZFNwZWVkIjo1LjczLCJ3aW5kQmVh
+        cmluZyI6MjkxLCJ2aXNpYmlsaXR5Ijo3Ljk0LCJjbG91ZENvdmVyIjowLjc2
+        LCJwcmVzc3VyZSI6MTAwOS40Miwib3pvbmUiOjI5Ny40Mn0seyJ0aW1lIjox
+        NDU3ODUyNDAwLCJzdW1tYXJ5IjoiUGFydGx5IGNsb3VkeSBpbiB0aGUgbW9y
+        bmluZy4iLCJpY29uIjoicGFydGx5LWNsb3VkeS1uaWdodCIsInN1bnJpc2VU
+        aW1lIjoxNDU3ODc1MDczLCJzdW5zZXRUaW1lIjoxNDU3OTE3NzQyLCJtb29u
+        UGhhc2UiOjAuMTgsInByZWNpcEludGVuc2l0eSI6MC4wMDA5LCJwcmVjaXBJ
+        bnRlbnNpdHlNYXgiOjAuMDA3MiwicHJlY2lwSW50ZW5zaXR5TWF4VGltZSI6
+        MTQ1Nzg1MjQwMCwicHJlY2lwUHJvYmFiaWxpdHkiOjAuMzYsInByZWNpcFR5
+        cGUiOiJzbm93IiwicHJlY2lwQWNjdW11bGF0aW9uIjowLjE1NywidGVtcGVy
+        YXR1cmVNaW4iOjI4LjMxLCJ0ZW1wZXJhdHVyZU1pblRpbWUiOjE0NTc4NzA0
+        MDAsInRlbXBlcmF0dXJlTWF4Ijo0My42MSwidGVtcGVyYXR1cmVNYXhUaW1l
+        IjoxNDU3OTAyODAwLCJhcHBhcmVudFRlbXBlcmF0dXJlTWluIjoyMC40OSwi
+        YXBwYXJlbnRUZW1wZXJhdHVyZU1pblRpbWUiOjE0NTc4NzA0MDAsImFwcGFy
+        ZW50VGVtcGVyYXR1cmVNYXgiOjM4Ljk4LCJhcHBhcmVudFRlbXBlcmF0dXJl
+        TWF4VGltZSI6MTQ1NzkwMjgwMCwiZGV3UG9pbnQiOjI1LjE2LCJodW1pZGl0
+        eSI6MC42OCwid2luZFNwZWVkIjo2LjY3LCJ3aW5kQmVhcmluZyI6MjY4LCJj
+        bG91ZENvdmVyIjowLjE5LCJwcmVzc3VyZSI6MTAwOS45NCwib3pvbmUiOjMx
+        NC4yOH0seyJ0aW1lIjoxNDU3OTM1MjAwLCJzdW1tYXJ5IjoiTWl4ZWQgcHJl
+        Y2lwaXRhdGlvbiBzdGFydGluZyBpbiB0aGUgYWZ0ZXJub29uLiIsImljb24i
+        OiJzbm93Iiwic3VucmlzZVRpbWUiOjE0NTc5NjEzNzcsInN1bnNldFRpbWUi
+        OjE0NTgwMDQyMDQsIm1vb25QaGFzZSI6MC4yMSwicHJlY2lwSW50ZW5zaXR5
+        IjowLjAwMzEsInByZWNpcEludGVuc2l0eU1heCI6MC4wMDc2LCJwcmVjaXBJ
+        bnRlbnNpdHlNYXhUaW1lIjoxNDU3OTkyODAwLCJwcmVjaXBQcm9iYWJpbGl0
+        eSI6MC4zOCwicHJlY2lwVHlwZSI6InNub3ciLCJwcmVjaXBBY2N1bXVsYXRp
+        b24iOjAuNTczLCJ0ZW1wZXJhdHVyZU1pbiI6MjkuMDcsInRlbXBlcmF0dXJl
+        TWluVGltZSI6MTQ1Nzk1NjgwMCwidGVtcGVyYXR1cmVNYXgiOjM5LjUsInRl
+        bXBlcmF0dXJlTWF4VGltZSI6MTQ1Nzk4MjAwMCwiYXBwYXJlbnRUZW1wZXJh
+        dHVyZU1pbiI6MjIuOTEsImFwcGFyZW50VGVtcGVyYXR1cmVNaW5UaW1lIjox
+        NDU3OTU2ODAwLCJhcHBhcmVudFRlbXBlcmF0dXJlTWF4IjozMy40MywiYXBw
+        YXJlbnRUZW1wZXJhdHVyZU1heFRpbWUiOjE0NTc5ODIwMDAsImRld1BvaW50
+        IjoyMy4wMywiaHVtaWRpdHkiOjAuNjcsIndpbmRTcGVlZCI6Ni44Mywid2lu
+        ZEJlYXJpbmciOjI0NywiY2xvdWRDb3ZlciI6MC40MywicHJlc3N1cmUiOjEw
+        MDcuMjYsIm96b25lIjozMjcuOTN9LHsidGltZSI6MTQ1ODAyMTYwMCwic3Vt
+        bWFyeSI6IkxpZ2h0IHNub3cgKDHigJMzIGluLikgdGhyb3VnaG91dCB0aGUg
+        ZGF5LiIsImljb24iOiJzbm93Iiwic3VucmlzZVRpbWUiOjE0NTgwNDc2ODEs
+        InN1bnNldFRpbWUiOjE0NTgwOTA2NjUsIm1vb25QaGFzZSI6MC4yNSwicHJl
+        Y2lwSW50ZW5zaXR5IjowLjAwNTgsInByZWNpcEludGVuc2l0eU1heCI6MC4w
+        MDg3LCJwcmVjaXBJbnRlbnNpdHlNYXhUaW1lIjoxNDU4MTA0NDAwLCJwcmVj
+        aXBQcm9iYWJpbGl0eSI6MC40NiwicHJlY2lwVHlwZSI6InNub3ciLCJwcmVj
+        aXBBY2N1bXVsYXRpb24iOjEuODY5LCJ0ZW1wZXJhdHVyZU1pbiI6MjAuODMs
+        InRlbXBlcmF0dXJlTWluVGltZSI6MTQ1ODA4NjQwMCwidGVtcGVyYXR1cmVN
+        YXgiOjMxLjksInRlbXBlcmF0dXJlTWF4VGltZSI6MTQ1ODAyMTYwMCwiYXBw
+        YXJlbnRUZW1wZXJhdHVyZU1pbiI6Ni44OSwiYXBwYXJlbnRUZW1wZXJhdHVy
+        ZU1pblRpbWUiOjE0NTgwNjQ4MDAsImFwcGFyZW50VGVtcGVyYXR1cmVNYXgi
+        OjI0Ljk5LCJhcHBhcmVudFRlbXBlcmF0dXJlTWF4VGltZSI6MTQ1ODAyMTYw
+        MCwiZGV3UG9pbnQiOjE0LjU5LCJodW1pZGl0eSI6MC42OCwid2luZFNwZWVk
+        IjoxMC42Miwid2luZEJlYXJpbmciOjI4MSwiY2xvdWRDb3ZlciI6MC43Mywi
+        cHJlc3N1cmUiOjEwMDguNDEsIm96b25lIjozODQuNzR9LHsidGltZSI6MTQ1
+        ODEwODAwMCwic3VtbWFyeSI6IkxpZ2h0IHNub3cgKDHigJMzIGluLikgdGhy
+        b3VnaG91dCB0aGUgZGF5LiIsImljb24iOiJzbm93Iiwic3VucmlzZVRpbWUi
+        OjE0NTgxMzM5ODQsInN1bnNldFRpbWUiOjE0NTgxNzcxMjYsIm1vb25QaGFz
+        ZSI6MC4yOCwicHJlY2lwSW50ZW5zaXR5IjowLjAwNTMsInByZWNpcEludGVu
+        c2l0eU1heCI6MC4wMDg3LCJwcmVjaXBJbnRlbnNpdHlNYXhUaW1lIjoxNDU4
+        MTA4MDAwLCJwcmVjaXBQcm9iYWJpbGl0eSI6MC40NiwicHJlY2lwVHlwZSI6
+        InNub3ciLCJwcmVjaXBBY2N1bXVsYXRpb24iOjIuMDA0LCJ0ZW1wZXJhdHVy
+        ZU1pbiI6MTYuMzUsInRlbXBlcmF0dXJlTWluVGltZSI6MTQ1ODEzNjgwMCwi
+        dGVtcGVyYXR1cmVNYXgiOjIyLjgsInRlbXBlcmF0dXJlTWF4VGltZSI6MTQ1
+        ODEwODAwMCwiYXBwYXJlbnRUZW1wZXJhdHVyZU1pbiI6NC44OSwiYXBwYXJl
+        bnRUZW1wZXJhdHVyZU1pblRpbWUiOjE0NTgxNDA0MDAsImFwcGFyZW50VGVt
+        cGVyYXR1cmVNYXgiOjE2LjI4LCJhcHBhcmVudFRlbXBlcmF0dXJlTWF4VGlt
+        ZSI6MTQ1ODEwODAwMCwiZGV3UG9pbnQiOjkuNTIsImh1bWlkaXR5IjowLjY2
+        LCJ3aW5kU3BlZWQiOjcuMzQsIndpbmRCZWFyaW5nIjoyODgsImNsb3VkQ292
+        ZXIiOjAuOTcsInByZXNzdXJlIjoxMDE5LjE1LCJvem9uZSI6Mzg3Ljk5fV19
+        fQ==
+    http_version: 
+  recorded_at: Wed, 09 Mar 2016 20:37:58 GMT
+- request:
+    method: get
+    uri: http://api.weathersource.com/v1/934e20948454d328f58f/history_by_postal_code.json?country_eq=US&fields=postal_code,tempAvg,precip,snowfall,timestamp&limit=25&period=day&postal_code_eq=80444&timestamp_between=2016-02-13T13:37%2013:37,2016-03-09T13:37%2013:37
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 09 Mar 2016 20:37:58 GMT
+      Server:
+      - Apache
+      Content-Length:
+      - '100'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"response_code":"400","message":"Bad Request: Invalid protocol. Request
+        must be sent using HTTPS."}'
+    http_version: 
+  recorded_at: Wed, 09 Mar 2016 20:37:58 GMT
+recorded_with: VCR 3.0.1

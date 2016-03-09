@@ -1,0 +1,68 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://AC25d4520e0b6f9da0e4570615a0e6424a:9953599211c2f7fc47f206e6aa72e83b@api.twilio.com/2010-04-01/Accounts/AC25d4520e0b6f9da0e4570615a0e6424a/Messages.json
+    body:
+      encoding: US-ASCII
+      string: From=%2B17208975626&To=%2B17203279102&Body=Thanks+for+signing+up+for+Snow+Dashboard%27s+text+notifications.+You+will+receive+message+alerts+about+your+favorite+mountains%21
+    headers:
+      Accept:
+      - application/json
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - twilio-ruby/4.11.1 (ruby/x86_64-darwin14 2.2.2-p95)
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 201
+      message: CREATED
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Accept, Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match,
+        If-Unmodified-Since
+      Access-Control-Allow-Methods:
+      - GET, POST, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - ETag
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 09 Mar 2016 20:49:52 GMT
+      Strict-Transport-Security:
+      - max-age=15768000
+      Twilio-Request-Duration:
+      - '0.224'
+      Twilio-Request-Id:
+      - RQe686100fd45b4b6e9b32c0381a51a254
+      X-Powered-By:
+      - AT-5000
+      X-Shenanigans:
+      - none
+      Content-Length:
+      - '927'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"sid": "SMdc71a7c79e744cb7a4012d6c385dbea3", "date_created": "Wed,
+        09 Mar 2016 20:49:52 +0000", "date_updated": "Wed, 09 Mar 2016 20:49:52 +0000",
+        "date_sent": null, "account_sid": "AC25d4520e0b6f9da0e4570615a0e6424a", "to":
+        "+17203279102", "from": "+17208975626", "messaging_service_sid": null, "body":
+        "Sent from your Twilio trial account - Thanks for signing up for Snow Dashboard''s
+        text notifications. You will receive message alerts about your favorite mountains!",
+        "status": "queued", "num_segments": "2", "num_media": "0", "direction": "outbound-api",
+        "api_version": "2010-04-01", "price": null, "price_unit": "USD", "error_code":
+        null, "error_message": null, "uri": "/2010-04-01/Accounts/AC25d4520e0b6f9da0e4570615a0e6424a/Messages/SMdc71a7c79e744cb7a4012d6c385dbea3.json",
+        "subresource_uris": {"media": "/2010-04-01/Accounts/AC25d4520e0b6f9da0e4570615a0e6424a/Messages/SMdc71a7c79e744cb7a4012d6c385dbea3/Media.json"}}'
+    http_version: 
+  recorded_at: Wed, 09 Mar 2016 20:49:52 GMT
+recorded_with: VCR 3.0.1

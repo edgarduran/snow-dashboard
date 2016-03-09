@@ -9,10 +9,6 @@ class GeocodingService
     end
   end
 
-  def check
-    parse_json(connection.get("json?latlng=40.714224,-73.961452&key=AIzaSyAqFCE_WcES8oPiBY4bbNSS3r6p-9BtIgM"))
-  end
-
   def zip(lat, long)
     raw = parse_json(connection.get("json?latlng=#{lat},#{long}&key=AIzaSyAqFCE_WcES8oPiBY4bbNSS3r6p-9BtIgM"))
     only_zip(raw)
