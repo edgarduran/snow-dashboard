@@ -22,7 +22,7 @@
    height: 75%;
    z-index: 10;
    border-radius: 3px;
-   background-color: rgba(0,0,0,0.7);
+   background-color: rgba(0,0,0,0.8);
 }
 
  .white-transparent {
@@ -36,25 +36,28 @@
  }
 
  .phone-form {
-   background-color: rgba(51, 51, 255,.95);
+   background-color: #000099;
+   opacity: 0.75;
+   border-radius: 5px;
    color: white;
    text-shadow: 1px 1px black;
    padding: 5px;
    margin-left: 10px;
-   border-radius: 5px;
  }
 
+
  .resort-search {
+   background-color: #000099;
+   opacity: 0.75;
    border-radius: 5px;
-   background-color: rgba(51, 51, 255,.95);
    color: white;
+   text-shadow: 1px 1px black;
    margin-left: 65px;
    padding: 8px;
-   text-shadow: 1px 1px black;
  }
 
  .dash-bkg {
-     background-color: gray;
+     background-image: image-url("black_bkg.png");
      background-size: 100%;
      background-repeat:no-repeat;
      background-attachment: fixed;
@@ -67,14 +70,16 @@
  }
 
  .resort-card {
-  background-color: #0000cc;
+  background-color: #000099;
   border-radius: 5px;
   color: white;
   text-shadow: 1px 1px black;
-  opacity: 0.90;
+  opacity: 0.75;
   margin-left: 65px;
   margin-bottom: 45px;
   padding: 8px;
+  border-style: solid;
+  border-width: 2px;
 }
 
 .mtn-desc{
