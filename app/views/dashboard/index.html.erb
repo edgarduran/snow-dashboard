@@ -1,13 +1,14 @@
 <body class="dash-bkg">
 
 <h1 class="text-center"><%= current_user.name %>'s Dashboard</h1>
-<div class="show-snow">
+<div class="show-snow text-center">
   <button type="button" class="btn btn-default btn-lg">
     <span class="glyphicon glyphicon-sunglasses" aria-hidden="true"></span> Snow Report
   </button>
-</div>
+</div><br>
 <div class="overlay">
-  <span>    
+  <button type="button" class="btn btn-warning">X</button>
+  <span>
     <%= render partial: 'partials/snow_graph' %>
   </span>
 </div>
@@ -38,7 +39,16 @@ $(document).ready(function(){
   $('.show-snow').on('click', function () {
 
     $('.overlay').toggle();
+    $('.show-snow').toggle();
+  });
+
+  $('.btn-warning').on('click', function () {
+
+    $('.overlay').toggle();
+    $('.show-snow').toggle();
   });
 });
+
+
 
 </script>

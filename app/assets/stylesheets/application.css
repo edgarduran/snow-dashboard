@@ -17,11 +17,12 @@
  .overlay{
    position: absolute;
    top: 25%;
-   left: 25%;
+   left: 10%;
    width: 75%;
    height: 75%;
    z-index: 10;
-   background-color: rgba(0,0,0,0.5);
+   border-radius: 3px;
+   background-color: rgba(0,0,0,0.7);
 }
 
  .white-transparent {
@@ -29,10 +30,9 @@
  }
 
  .overlay span {
-   position:absolute;
-   top:50%;
-   left:50;
-   margin-left: 25%
+   position: absolute;
+   top: 20%;
+   margin-left: 25%;
  }
 
  .phone-form {
