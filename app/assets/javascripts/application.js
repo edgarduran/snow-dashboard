@@ -17,3 +17,19 @@
 //= require highcharts/highcharts
 //= require highcharts/highcharts-more
 //= require highcharts/highstock
+
+$(document).ready(function(){
+  $('.overlay').hide();
+
+  $('.show-snow').on('click', function () {
+
+    $('.overlay').toggle();
+    $('.show-snow').toggle();
+  });
+
+  $('.btn-warning').on('click', function () {
+
+    $('.overlay').toggle();
+    $('.show-snow').toggle();
+  });
+});

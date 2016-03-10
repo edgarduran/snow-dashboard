@@ -12341,3 +12341,19 @@ removeEvent:S,createElement:Y,discardElement:Ta,css:J,each:q,extend:u,map:va,mer
 
 
 
+
+$(document).ready(function(){
+  $('.overlay').hide();
+
+  $('.show-snow').on('click', function () {
+
+    $('.overlay').toggle();
+    $('.show-snow').toggle();
+  });
+
+  $('.btn-warning').on('click', function () {
+
+    $('.overlay').toggle();
+    $('.show-snow').toggle();
+  });
+});
