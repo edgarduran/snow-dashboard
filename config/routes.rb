@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'test/index'
+
   get 'resorts/index'
 
   get '/', to: 'landing#index'
@@ -10,5 +12,6 @@ Rails.application.routes.draw do
   resources :dashboard, only: [:index]
   resources :resorts,   only: [:index, :create, :destroy]
   resources :sessions,  only: [:edit, :update]
+  resources :test,  only: [:index]
 
 end
