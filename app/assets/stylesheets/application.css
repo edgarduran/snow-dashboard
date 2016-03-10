@@ -13,6 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+ .graph {
+   height: 300px;
+   width: 600px;
+ }
  .dash-bkg {
      background-image: url("WaCold.jpg");
      background-size: 100%;

@@ -16,6 +16,7 @@ gem 'faraday'
 gem 'twilio-ruby', '~> 4.11.1'
 gem 'forecast_io'
 gem 'geocoder'
+gem 'lazy_high_charts'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

@@ -6,6 +6,8 @@ class DashboardController < ApplicationController
     @states      = state_list
     @forecast    = forecast_service.three_day_forecast(@resorts)
     @recent_snow = historical_snowfall_service.twenty_five_day_snow(@resorts)
+    @chart       = high_charts_service.chart(@recent_snow, @resorts)
+    @chart_globals = high_charts_service.chart_globals
   end
 
   private
@@ -16,6 +18,10 @@ class DashboardController < ApplicationController
 
   def historical_snowfall_service
     HistoricalSnowfallService.new
+  end
+
+  def high_charts_service
+    HighChartsService.new
   end
 
   def state_list
