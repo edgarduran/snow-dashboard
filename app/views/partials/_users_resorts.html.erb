@@ -45,9 +45,10 @@
             </div>
               <h2 class="text-center">Snow in the last 25 days: <%= @recent_snow[index] %> inches</h2>
               <div class="mtn-desc text-center">
-                <p><%= resort[:description] %></p>
+                <p><%= truncate(resort[:description], length: 275) %></p>
               </div>
         </div>
     </div>
   <% end %>
+
 </div>

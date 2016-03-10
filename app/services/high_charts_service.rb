@@ -1,10 +1,11 @@
 class HighChartsService
 
-  def chart
+  def chart(recent_snow, resorts)
+    names = resort_names(resorts)
     LazyHighCharts::HighChart.new('graph') do |f|
-      f.title(text: "Snow last 25 days")
-      f.xAxis(categories: ["Snow"])
-      f.series(name: "Inches", yAxis: 0, data: [14])
+      f.title(text: "Snow last 25 days (zip code based)")
+      f.xAxis(categories: names)
+      f.series(name: "Inches", yAxis: 0, data: recent_snow)
 
       f.yAxis [
         {title: {text: "Inches of snow", margin: 12} },
@@ -12,6 +13,12 @@ class HighChartsService
       ]
       f.legend(enabled: false)
       f.chart({defaultSeriesType: "column", height: 200})
+    end
+  end
+
+  def resort_names(resorts)
+    resorts.map do |resort|
+      resort[:name]
     end
   end
 
