@@ -10,7 +10,7 @@ class GeocodingService
   end
 
   def zip(lat, long)
-    raw = parse_json(connection.get("json?latlng=#{lat},#{long}&key=AIzaSyAqFCE_WcES8oPiBY4bbNSS3r6p-9BtIgM"))
+    raw = parse_json(connection.get("json?latlng=#{lat},#{long}&key=#{ENV['GOOGLE_GEOCODE_KEY']}"))
     only_zip(raw)
   end
 

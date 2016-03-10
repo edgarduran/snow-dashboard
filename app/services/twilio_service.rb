@@ -22,14 +22,5 @@ class TwilioService
     )
   end
 
-  def send_mms
-    # @client.messages.create(
-    # from: '+14159341234',
-    # to: '+16105557069',
-    # body: 'Hey there!',
-    # media_url: 'http://example.com/smileyface.jpg'
-    # )
-  end
-
 
 end

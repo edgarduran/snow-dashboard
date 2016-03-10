@@ -2,7 +2,7 @@ class HistoricalSnowfallService
   attr_reader :connection
 
   def initialize
-    @connection = Faraday.new(:url => "https://api.weathersource.com/v1/934e20948454d328f58f/") do |faraday|
+    @connection = Faraday.new(:url => "https://api.weathersource.com/v1/#{ENV['WEATHER_SOURCE_KEY']}/") do |faraday|
       faraday.request  :url_encoded             # form-encode POST params
       faraday.response :logger                  # log requests to STDOUT
       faraday.adapter  Faraday.default_adapter  # make requests with Net::HTTP

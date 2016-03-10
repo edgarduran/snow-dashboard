@@ -3,7 +3,7 @@ class ForecastService
   attr_reader :connection
 
   def initialize
-    @connection = Faraday.new(:url => "https://api.forecast.io/forecast/2f0b7cab287907f249c7216344eea871/") do |faraday|
+    @connection = Faraday.new(:url => "https://api.forecast.io/forecast/#{ENV['FORECAST_API_KEY']}/") do |faraday|
       faraday.request  :url_encoded             # form-encode POST params
       faraday.response :logger                  # log requests to STDOUT
       faraday.adapter  Faraday.default_adapter  # make requests with Net::HTTP
@@ -36,7 +36,7 @@ class ForecastService
   end
 
   private
-  # put in a helper 
+  # put in a helper
   def parse_json(response)
     JSON.parse(response.body, symbolize_names: true)
   end
