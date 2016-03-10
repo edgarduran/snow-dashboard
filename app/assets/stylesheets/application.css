@@ -13,13 +13,26 @@
  *= require_tree .
  *= require_self
  */
+
+ .overlay{
+   position: absolute;
+   top: 25%;
+   left: 25%;
+   width: 75%;
+   height: 75%;
+   z-index: 10;
+   background-color: rgba(0,0,0,0.5);
+}
+
  .white-transparent {
    background-color: rgba(255,255,255,.3);
  }
 
- .graph {
-   height: 300px;
-   width: 600px;
+ .overlay span {
+   position:absolute;
+   top:50%;
+   left:50;
+   margin-left: 25%
  }
 
  .phone-form {
