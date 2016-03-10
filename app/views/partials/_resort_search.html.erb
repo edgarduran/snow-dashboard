@@ -2,7 +2,7 @@
   <h3 class="center">Add a ski area to your dashboard</h3>
   <%= form_tag resorts_path, method: :get do %>
     <%= label_tag :state %>
-    <%= select_tag :state, options_for_select(@states)%>
+    <%= select_tag :state, options_for_select(@presenter.states)%>
     <%= label_tag :city %>
     <%= text_field_tag :city %>
     <%= label_tag :resort_name %>

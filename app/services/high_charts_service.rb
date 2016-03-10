@@ -22,7 +22,7 @@ class HighChartsService
     end
   end
 
-  def chart_globals
+  def chart_settings
     LazyHighCharts::HighChartGlobals.new do |f|
       f.global(useUTC: false)
       f.chart(
