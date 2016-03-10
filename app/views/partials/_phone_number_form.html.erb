@@ -1,5 +1,5 @@
-<div class="phone-form">
-  <h3>Enter your phone number to receive snow text alerts</h3>
+<div class="col-md-4 phone-form">
+  <h3>Add a phone # to receive text alerts</h3>
   <%= form_tag edit_session_path(id: current_user.id), method: :get do %>
     <%= label_tag :phone_number %>
     <%= text_field_tag :phone_number %>

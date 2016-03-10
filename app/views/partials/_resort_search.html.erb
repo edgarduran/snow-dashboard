@@ -1,5 +1,5 @@
-<div class="resort-search">
-  <h3 class="">Add a ski area to your dashboard</h3>
+<div class="col-md-6 resort-search">
+  <h3 class="center">Add a ski area to your dashboard</h3>
   <%= form_tag resorts_path, method: :get do %>
     <%= label_tag :state %>
     <%= select_tag :state, options_for_select(@states)%>

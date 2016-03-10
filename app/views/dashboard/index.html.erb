@@ -1,7 +1,7 @@
 <body class="dash-bkg">
 
 <h1 class="text-center"><%= current_user.name %>'s Dashboard</h1>
-<div>
+<div class="row">
   <%= render partial: 'partials/resort_search' %>
   <% unless current_user.phone_number %>
     <%= render partial: 'partials/phone_number_form' %>

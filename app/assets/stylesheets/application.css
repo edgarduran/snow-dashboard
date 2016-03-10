@@ -13,6 +13,9 @@
  *= require_tree .
  *= require_self
  */
+ .white-transparent {
+   background-color: rgba(255,255,255,.3);
+ }
 
  .graph {
    height: 300px;
@@ -23,11 +26,17 @@
    background-color: rgba(51, 51, 255,.95);
    color: white;
    text-shadow: 1px 1px black;
+   padding: 5px;
+   margin-left: 10px;
+   border-radius: 5px;
  }
 
  .resort-search {
+   border-radius: 5px;
    background-color: rgba(51, 51, 255,.95);
    color: white;
+   margin-left: 65px;
+   padding: 8px;
    text-shadow: 1px 1px black;
  }
 
@@ -46,6 +55,7 @@
 
  .resort-card {
   background-color: #0000cc;
+  border-radius: 5px;
   color: white;
   text-shadow: 1px 1px black;
   opacity: 0.90;
