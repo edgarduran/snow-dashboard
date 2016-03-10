@@ -54,14 +54,14 @@
  }
 
  .dash-bkg {
-     background-image: url("WaCold.jpg");
+     background-image: image-url("WaCold.jpg");
      background-size: 100%;
      background-repeat:no-repeat;
      background-attachment: fixed;
  }
 
  .landing {
-     background-image: url("ski_home.jpg");
+     background-image: image-url("ski_home.jpg");
      background-size: 100%;
      background-repeat:no-repeat;
  }
