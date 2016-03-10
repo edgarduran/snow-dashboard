@@ -1,5 +1,6 @@
-# refactor out the keys
-# memoization
+# X memoization
 # refactor ivars to a decorator
-# refactor if/else in trail api
-# pull out the parse method
+# X refactor if/else in trail api
+# X pull out the parse method
+# delete un-used code
+# delete un-used files/folders

@@ -1,4 +1,5 @@
 class TrailapiService
+  include JsonHelper
   attr_reader :connection
 
   def initialize
@@ -13,14 +14,33 @@ class TrailapiService
 
   def search_results(params)
     if params[:city].empty? && params[:resort_name].empty?
-      results = parse_json(connection.get("?limit=75&q[activities_activity_type_name_eq]=snow+sports&q[state_cont]=#{params[:state]}"))
+      state_only_search(params)
     elsif params[:city].empty?
-      results = parse_json(connection.get("?limit=50&q[activities_activity_name_cont]=#{params[:resort_name]}&q[activities_activity_type_name_eq]=snow+sports&q[state_cont]=#{params[:state]}"))
+      state_resort_search(params)
     elsif params[:resort_name].empty?
-      results = parse_json(connection.get("?limit=50&q[activities_activity_type_name_eq]=snow+sports&q[city_cont]=#{params[:city]}&q[state_cont]=#{params[:state]}"))
+      state_city_search(params)
     else
-      results = parse_json(connection.get("?limit=20&q[activities_activity_name_cont]=#{params[:resort_name]}&q[activities_activity_type_name_eq]=snow+sports&q[city_cont]=#{params[:city]}&q[state_cont]=#{params[:state]}"))
+      all_fields_search(params)
     end
+  end
+
+  def all_fields_search(params)
+    results = parse_json(connection.get("?limit=20&q[activities_activity_name_cont]=#{params[:resort_name]}&q[activities_activity_type_name_eq]=snow+sports&q[city_cont]=#{params[:city]}&q[state_cont]=#{params[:state]}"))
+    clean_up_search(results, params)
+  end
+
+  def state_city_search(params)
+    results = parse_json(connection.get("?limit=50&q[activities_activity_type_name_eq]=snow+sports&q[city_cont]=#{params[:city]}&q[state_cont]=#{params[:state]}"))
+    clean_up_search(results, params)
+  end
+
+  def state_resort_search(params)
+    results = parse_json(connection.get("?limit=50&q[activities_activity_name_cont]=#{params[:resort_name]}&q[activities_activity_type_name_eq]=snow+sports&q[state_cont]=#{params[:state]}"))
+    clean_up_search(results, params)
+  end
+
+  def state_only_search(params)
+    results = parse_json(connection.get("?limit=75&q[activities_activity_type_name_eq]=snow+sports&q[state_cont]=#{params[:state]}"))
     clean_up_search(results, params)
   end
 
@@ -38,12 +58,6 @@ class TrailapiService
       }
     end
     new_hash.delete_if { |result| !result[:name].downcase.include?(params[:resort_name].downcase)}
-  end
-
-
-  private
-  def parse_json(response)
-    JSON.parse(response.body, symbolize_names: true)
   end
 
 end

@@ -1,5 +1,6 @@
 require 'forecast_io'
 class ForecastService
+  include JsonHelper
   attr_reader :connection
 
   def initialize
@@ -33,12 +34,6 @@ class ForecastService
         humidity:    day[:humidity]
       }
     end
-  end
-
-  private
-  # put in a helper
-  def parse_json(response)
-    JSON.parse(response.body, symbolize_names: true)
   end
 
 end

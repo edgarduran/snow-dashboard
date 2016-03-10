@@ -3,7 +3,7 @@ class DashboardController < ApplicationController
   def index
     # decorator
     # @dashboard_presenter = DashboardPresenter.new(current_user)
-    
+
     @user_info   = current_user
     @resorts     = current_user.resorts
     @states      = state_list
@@ -20,11 +20,12 @@ class DashboardController < ApplicationController
   end
 
   def historical_snowfall_service
-    HistoricalSnowfallService.new
+    @recent_snow ||= HistoricalSnowfallService.new
   end
 
   def high_charts_service
-    HighChartsService.new
+    @chart ||= HighChartsService.new
+    @chart_globals ||= HighChartsService.new
   end
 
   def state_list

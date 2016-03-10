@@ -1,4 +1,5 @@
 class HistoricalSnowfallService
+  include JsonHelper
   attr_reader :connection
 
   def initialize
@@ -18,11 +19,6 @@ class HistoricalSnowfallService
 
   def calculate_snowfall(days)
     days.map { |day| day[:snowfall] }.inject(:+)
-  end
-
-  private
-  def parse_json(response)
-    JSON.parse(response.body, symbolize_names: true)
   end
 
 end
