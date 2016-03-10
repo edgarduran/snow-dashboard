@@ -4,11 +4,9 @@
 <div>
   <%= render partial: 'partials/resort_search' %>
   <% unless current_user.phone_number %>
-    <div class="phone">
-      <%= render partial: 'partials/phone_number_form' %>
-    </div>
+    <%= render partial: 'partials/phone_number_form' %>
   <% end %>
-</div>
+</div><br><br>
 <% if current_user.resorts == [] %>
   <h3>Your dashboard is empty add your favorite resorts to begin playing</h3>
 <% else %>
