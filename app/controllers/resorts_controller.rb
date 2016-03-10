@@ -14,7 +14,8 @@ class ResortsController < ApplicationController
                     longitude:     params[:longitude],
                     user_id:       params[:user_id].to_i,
                     zip_code:      geocoding_service.zip(params[:latitude].to_f, params[:longitude].to_f)
-                        )
+                    )
+
     if @resort.save
       redirect_to dashboard_index_path
       flash[:success] = "#{@resort.official_name} has been added to your dashboard."

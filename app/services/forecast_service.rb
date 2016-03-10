@@ -36,7 +36,7 @@ class ForecastService
   end
 
   private
-
+  # put in a helper 
   def parse_json(response)
     JSON.parse(response.body, symbolize_names: true)
   end
