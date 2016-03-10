@@ -1,0 +1,55 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
+
+ .graph {
+   height: 300px;
+   width: 600px;
+ }
+ .dash-bkg {
+     background-image: url("WaCold.jpg");
+     background-size: 100%;
+     background-repeat:no-repeat;
+     background-attachment: fixed;
+ }
+
+ .landing {
+     background-image: url("ski_home.jpg");
+     background-size: 100%;
+     background-repeat:no-repeat;
+ }
+
+ .resort-card {
+  background-color: #0000cc;
+  color: white;
+  opacity: 0.75;
+  margin: 8px;
+  padding: 8px;
+}
+
+.mtn-desc{
+    width: 420px;
+    height: 175px;
+    margin: 18px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}​
+
+.thumbnail{
+  width: 100px;
+  height: 110px;
+  overflow:hidden;
+}
