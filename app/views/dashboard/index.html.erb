@@ -2,7 +2,6 @@
 
 <h1 class="text-center"><%= current_user.name %>'s Dashboard</h1>
 <div>
-  <h3>Add a ski area to your dashboard</h3>
   <%= render partial: 'partials/resort_search' %>
   <% unless current_user.phone_number %>
     <div class="phone">

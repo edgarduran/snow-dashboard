@@ -18,6 +18,19 @@
    height: 300px;
    width: 600px;
  }
+
+ .phone-form {
+   background-color: rgba(51, 51, 255,.95);
+   color: white;
+   text-shadow: 1px 1px black;
+ }
+
+ .resort-search {
+   background-color: rgba(51, 51, 255,.95);
+   color: white;
+   text-shadow: 1px 1px black;
+ }
+
  .dash-bkg {
      background-image: url("WaCold.jpg");
      background-size: 100%;
@@ -34,8 +47,10 @@
  .resort-card {
   background-color: #0000cc;
   color: white;
-  opacity: 0.75;
-  margin: 8px;
+  text-shadow: 1px 1px black;
+  opacity: 0.90;
+  margin-left: 65px;
+  margin-bottom: 45px;
   padding: 8px;
 }
 
@@ -50,5 +65,6 @@
 .thumbnail{
   width: 100px;
   height: 110px;
+  text-shadow: 2px 2px black;
   overflow:hidden;
 }
