@@ -1,17 +1,14 @@
 require 'forecast_io'
 class ForecastService
+  include JsonHelper
   attr_reader :connection
 
   def initialize
-    @connection = Faraday.new(:url => "https://api.forecast.io/forecast/2f0b7cab287907f249c7216344eea871/") do |faraday|
+    @connection = Faraday.new(:url => "https://api.forecast.io/forecast/#{ENV['FORECAST_API_KEY']}/") do |faraday|
       faraday.request  :url_encoded             # form-encode POST params
       faraday.response :logger                  # log requests to STDOUT
       faraday.adapter  Faraday.default_adapter  # make requests with Net::HTTP
     end
-  end
-
-  def weather
-    parse_json(connection.get("39.7392,-104.9903?exclude=[minutely,flags,hourly]"))
   end
 
   def three_day_forecast(user_resorts)
@@ -33,12 +30,6 @@ class ForecastService
         humidity:    day[:humidity]
       }
     end
-  end
-
-  private
-  # put in a helper 
-  def parse_json(response)
-    JSON.parse(response.body, symbolize_names: true)
   end
 
 end

@@ -19,17 +19,17 @@
 //= require highcharts/highstock
 
 $(document).ready(function(){
-  $('.overlay').hide();
+  var table = $('.overlay')
 
   $('.show-snow').on('click', function () {
 
-    $('.overlay').toggle();
+    table.removeClass('hidden');
     $('.show-snow').toggle();
   });
 
   $('.btn-warning').on('click', function () {
 
-    $('.overlay').toggle();
+    table.addClass('hidden');
     $('.show-snow').toggle();
   });
 });

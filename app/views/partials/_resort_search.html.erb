@@ -1,12 +1,9 @@
-<div class="col-md-6 resort-search">
-  <h3 class="center">Add a ski area to your dashboard</h3>
+<div class="col-md-5 resort-search">
+  <h3 class="center white">Add a ski area to your dashboard</h3>
   <%= form_tag resorts_path, method: :get do %>
-    <%= label_tag :state %>
-    <%= select_tag :state, options_for_select(@states)%>
-    <%= label_tag :city %>
-    <%= text_field_tag :city %>
-    <%= label_tag :resort_name %>
-    <%= text_field_tag :resort_name %>
+    <%= select_tag :state, options_for_select(@presenter.states)%>
+    <%= text_field_tag :city, nil, placeholder: 'City' %>
+    <%= text_field_tag :resort_name, nil, placeholder: 'Resort name' %>
     <%= submit_tag "Search", class:"btn btn-success" %>
   <% end %>
 </div>

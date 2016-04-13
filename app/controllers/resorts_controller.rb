@@ -1,7 +1,7 @@
 class ResortsController < ApplicationController
 
   def index
-    @results = trailapi_service.search_results(params)
+    @results ||= trailapi_service.search_results(params)
   end
 
   def create

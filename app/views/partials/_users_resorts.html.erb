@@ -1,5 +1,5 @@
 <div class="row">
-  <% @resorts.each_with_index do |resort, index| %>
+  <% @presenter.resorts.each_with_index do |resort, index| %>
     <div class="col-md-5 center resort-card">
         <%= link_to "X", resort_path(resort.id), method: :delete, class: "btn btn-danger" %>
         <h3 class="text-center"><%= resort.official_name %></h3>
@@ -7,40 +7,40 @@
             <div class="col-md-4 col-sm-4">
               <div class="thumbnail">
                 <h4 class="text-center">Today</h4>
-                <%= image_tag "#{@forecast[index][0][:icon]}.png", class: "thumbnail"%>
-                <p class="text-center"><%= @forecast[index][0][:summary] %></p>
+                <%= image_tag "#{@presenter.forecast[index][0][:icon]}.png", class: "thumbnail"%>
+                <p class="text-center"><%= @presenter.forecast[index][0][:summary] %></p>
               </div>
                 <ul class="list-unstyled">
-                    <li>Max: <%= @forecast[index][0][:max_temp] %> </li>
-                    <li>Min: <%= @forecast[index][0][:min_temp] %></li>
-                    <li>Prob: <%= @forecast[index][0][:precip_prob] %> </li>
-                    <li>Hum: <%= @forecast[index][0][:humidity] %> </li>
+                    <li>Max: <%= @presenter.forecast[index][0][:max_temp] %> </li>
+                    <li>Min: <%= @presenter.forecast[index][0][:min_temp] %></li>
+                    <li>Prob: <%= @presenter.forecast[index][0][:precip_prob] %> </li>
+                    <li>Hum: <%= @presenter.forecast[index][0][:humidity] %> </li>
                 </ul>
           </div>
             <div class="col-md-4 col-sm-4">
               <div class="thumbnail">
                 <h4 class="text-center"><%= DateTime.tomorrow.strftime("%A") %></h4>
-                <%= image_tag "#{@forecast[index][1][:icon]}.png", class: "thumbnail"%>
-                <p class="text-center"><%= @forecast[index][1][:summary] %></p>
+                <%= image_tag "#{@presenter.forecast[index][1][:icon]}.png", class: "thumbnail"%>
+                <p class="text-center"><%= @presenter.forecast[index][1][:summary] %></p>
               </div>
                 <ul class="list-unstyled">
-                    <li>Max: <%= @forecast[index][1][:max_temp] %> </li>
-                    <li>Min: <%= @forecast[index][1][:min_temp] %></li>
-                    <li>Prob: <%= @forecast[index][1][:precip_prob] %> </li>
-                    <li>Hum: <%= @forecast[index][1][:humidity] %> </li>
+                    <li>Max: <%= @presenter.forecast[index][1][:max_temp] %> </li>
+                    <li>Min: <%= @presenter.forecast[index][1][:min_temp] %></li>
+                    <li>Prob: <%= @presenter.forecast[index][1][:precip_prob] %> </li>
+                    <li>Hum: <%= @presenter.forecast[index][1][:humidity] %> </li>
                 </ul>
             </div>
             <div class="col-md-4 col-sm-4">
                 <div class="thumbnail">
                   <h4 class="text-center"><%= (DateTime.tomorrow + 1).strftime("%A") %></h4>
-                  <%= image_tag "#{@forecast[index][2][:icon]}.png", class: "thumbnail"%>
-                  <p class="text-center"><%= @forecast[index][2][:summary] %></p>
+                  <%= image_tag "#{@presenter.forecast[index][2][:icon]}.png", class: "thumbnail"%>
+                  <p class="text-center"><%= @presenter.forecast[index][2][:summary] %></p>
                 </div>
                 <ul class="list-unstyled">
-                    <li>Max: <%= @forecast[index][2][:max_temp] %> </li>
-                    <li>Min: <%= @forecast[index][2][:min_temp] %></li>
-                    <li>Prob: <%= @forecast[index][2][:precip_prob] %> </li>
-                    <li>Hum: <%= @forecast[index][2][:humidity] %> </li>
+                    <li>Max: <%= @presenter.forecast[index][2][:max_temp] %> </li>
+                    <li>Min: <%= @presenter.forecast[index][2][:min_temp] %></li>
+                    <li>Prob: <%= @presenter.forecast[index][2][:precip_prob] %> </li>
+                    <li>Hum: <%= @presenter.forecast[index][2][:humidity] %> </li>
                 </ul><br>
             </div>
               <div class="mtn-desc text-center">

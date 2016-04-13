@@ -1,8 +1,9 @@
 class HistoricalSnowfallService
+  include JsonHelper
   attr_reader :connection
 
   def initialize
-    @connection = Faraday.new(:url => "https://api.weathersource.com/v1/934e20948454d328f58f/") do |faraday|
+    @connection = Faraday.new(:url => "https://api.weathersource.com/v1/#{ENV['WEATHER_SOURCE_KEY']}/") do |faraday|
       faraday.request  :url_encoded             # form-encode POST params
       faraday.response :logger                  # log requests to STDOUT
       faraday.adapter  Faraday.default_adapter  # make requests with Net::HTTP
@@ -18,11 +19,6 @@ class HistoricalSnowfallService
 
   def calculate_snowfall(days)
     days.map { |day| day[:snowfall] }.inject(:+)
-  end
-
-  private
-  def parse_json(response)
-    JSON.parse(response.body, symbolize_names: true)
   end
 
 end
