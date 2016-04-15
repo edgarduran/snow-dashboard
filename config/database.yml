@@ -78,6 +78,10 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-production:
+
+
+  production:
   <<: *default
   database: snow-dashboard_production
+  username: snow-dashboard
+  password: <%= ENV['SNOW_DASHBOARD_DATABASE_PASSWORD'] %>
