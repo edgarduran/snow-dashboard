@@ -10,7 +10,7 @@ A historical snowfall graph tells you how much snow your resorts have had in the
 
 [Snow Dashboard](https://snow-dashboard.herokuapp.com/)  
 
-![](http://i.imgur.com/pGviLyT.png)
+![](http://i.imgur.com/ZTbLVuL.png)
 
 ![](http://i.imgur.com/AvGiS5P.png)
 
