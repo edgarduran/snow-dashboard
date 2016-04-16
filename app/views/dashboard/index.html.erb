@@ -2,9 +2,11 @@
 
 <h1 class="text-center" id="dash-header"><%= current_user.name %>'s Dashboard</h1>
 <div class="show-snow text-center">
-  <button type="button" class="btn btn-default btn-lg">
-    <span class="glyphicon glyphicon-sunglasses" aria-hidden="true"></span> Snow Report
-  </button>
+  <% unless current_user.resorts == [] %>
+    <button type="button" class="btn btn-default btn-lg">
+      <span class="glyphicon glyphicon-sunglasses" aria-hidden="true"></span> Snow Report
+    </button>
+  <% end %>
 </div><br>
 <div class="overlay hidden">
   <button type="button" class="btn btn-warning">X</button>
@@ -17,7 +19,7 @@
   <% end %>
 </div><br><br>
 <% if current_user.resorts == [] %>
-  <h3>Your dashboard is empty add your favorite resorts to begin playing</h3>
+  <h3 class="text-center" id="dash-header">Your dashboard is empty add your favorite resorts to begin playing</h3>
 <% else %>
   <div class="resorts">
     <%= render partial: 'partials/users_resorts' %>
